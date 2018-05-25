@@ -310,18 +310,6 @@ parameters.h
 hook.h
 /home/ragebone/Documents/VCS/colorchord/colorchord2/hook.h
 
-/home/ragebone/Documents/VCS/colorchord/colorchord2/WinDriver.c
-DrawFunctions.h
-/home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.h
-windows.h
--
-stdlib.h
--
-stdio.h
--
-malloc.h
--
-
 /home/ragebone/Documents/VCS/colorchord/colorchord2/XDriver.c
 DrawFunctions.h
 /home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.h
@@ -343,6 +331,8 @@ stdio.h
 -
 stdlib.h
 -
+
+/home/ragebone/Documents/VCS/colorchord/colorchord2/ccconfig.h
 
 /home/ragebone/Documents/VCS/colorchord/colorchord2/chash.c
 chash.h
@@ -378,7 +368,7 @@ string.h
 stdlib.h
 -
 os_generic.h
--
+/home/ragebone/Documents/VCS/colorchord/colorchord2/os_generic.h
 parameters.h
 /home/ragebone/Documents/VCS/colorchord/colorchord2/parameters.h
 
@@ -696,22 +686,6 @@ stdio.h
 string.h
 -
 
-/home/ragebone/Documents/VCS/colorchord/colorchord2/sound_win.c
-windows.h
--
-parameters.h
-/home/ragebone/Documents/VCS/colorchord/colorchord2/parameters.h
-sound.h
-/home/ragebone/Documents/VCS/colorchord/colorchord2/sound.h
-os_generic.h
-/home/ragebone/Documents/VCS/colorchord/colorchord2/os_generic.h
-stdio.h
--
-stdint.h
--
-mmsystem.h
--
-
 /home/ragebone/Documents/VCS/colorchord/colorchord2/util.c
 math.h
 -
@@ -741,8 +715,8 @@ stdint.h
 -
 
 /home/ragebone/Documents/VCS/colorchord/embeddedcommon/DFT32.h
-ccconfig.h
--
+../colorchord2/ccconfig.h
+/home/ragebone/Documents/VCS/colorchord/colorchord2/ccconfig.h
 c_types.h
 -
 stdint.h

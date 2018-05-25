@@ -1,12 +1,12 @@
 //Copyright (c) 2011 <>< Charles Lohr - Under the MIT/x11 or NewBSD License you choose.
 //Portion from: http://en.wikibooks.org/wiki/Windows_Programming/Window_Creation
 
-
-#include "DrawFunctions.h"
-#include <windows.h>
+//#include <windows.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <malloc.h> //for alloca
+
+#include "DrawFunctions.h"
 
 static HINSTANCE lhInstance;
 static HWND lsHWND;

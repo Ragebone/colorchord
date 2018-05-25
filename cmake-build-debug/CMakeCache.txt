@@ -179,6 +179,9 @@ colorchord_BINARY_DIR:STATIC=/home/ragebone/Documents/VCS/colorchord/cmake-build
 //Value Computed by CMake
 colorchord_SOURCE_DIR:STATIC=/home/ragebone/Documents/VCS/colorchord
 
+//The directory containing a CMake configuration file for lX11.
+lX11_DIR:PATH=lX11_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

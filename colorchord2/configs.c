@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <os_generic.h>
+//#include <os_generic.h>
+#include "os_generic.h"
 #include "parameters.h"
 
 int gargc;

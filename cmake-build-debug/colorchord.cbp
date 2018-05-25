@@ -121,9 +121,6 @@
 		<Unit filename="/home/ragebone/Documents/VCS/colorchord/colorchord2/RecorderPlugin.c">
 			<Option target="colorchord2"/>
 		</Unit>
-		<Unit filename="/home/ragebone/Documents/VCS/colorchord/colorchord2/WinDriver.c">
-			<Option target="colorchord2"/>
-		</Unit>
 		<Unit filename="/home/ragebone/Documents/VCS/colorchord/colorchord2/XDriver.c">
 			<Option target="colorchord2"/>
 		</Unit>
@@ -215,9 +212,6 @@
 			<Option target="colorchord2"/>
 		</Unit>
 		<Unit filename="/home/ragebone/Documents/VCS/colorchord/colorchord2/sound_pulse.c">
-			<Option target="colorchord2"/>
-		</Unit>
-		<Unit filename="/home/ragebone/Documents/VCS/colorchord/colorchord2/sound_win.c">
 			<Option target="colorchord2"/>
 		</Unit>
 		<Unit filename="/home/ragebone/Documents/VCS/colorchord/colorchord2/util.c">

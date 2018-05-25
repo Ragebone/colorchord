@@ -101,12 +101,10 @@ colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o: ../colorchord2/os_gen
 colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o: ../colorchord2/outdrivers.h
 colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o: ../colorchord2/parameters.h
 
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o: ../colorchord2/DrawFunctions.h
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o: ../colorchord2/WinDriver.c
-
 colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o: ../colorchord2/DrawFunctions.h
 colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o: ../colorchord2/XDriver.c
 
+colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o: ../colorchord2/ccconfig.h
 colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o: ../embeddedcommon/DFT32.c
 colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o: ../embeddedcommon/DFT32.h
 
@@ -118,6 +116,7 @@ colorchord2/CMakeFiles/colorchord2.dir/color.c.o: ../colorchord2/color.h
 
 colorchord2/CMakeFiles/colorchord2.dir/configs.c.o: ../colorchord2/configs.c
 colorchord2/CMakeFiles/colorchord2.dir/configs.c.o: ../colorchord2/configs.h
+colorchord2/CMakeFiles/colorchord2.dir/configs.c.o: ../colorchord2/os_generic.h
 colorchord2/CMakeFiles/colorchord2.dir/configs.c.o: ../colorchord2/parameters.h
 
 colorchord2/CMakeFiles/colorchord2.dir/decompose.c.o: ../colorchord2/decompose.c
@@ -151,6 +150,7 @@ colorchord2/CMakeFiles/colorchord2.dir/main.c.o: ../colorchord2/outdrivers.h
 colorchord2/CMakeFiles/colorchord2.dir/main.c.o: ../colorchord2/parameters.h
 colorchord2/CMakeFiles/colorchord2.dir/main.c.o: ../colorchord2/sound.h
 
+colorchord2/CMakeFiles/colorchord2.dir/notefinder.c.o: ../colorchord2/ccconfig.h
 colorchord2/CMakeFiles/colorchord2.dir/notefinder.c.o: ../colorchord2/decompose.h
 colorchord2/CMakeFiles/colorchord2.dir/notefinder.c.o: ../colorchord2/dft.h
 colorchord2/CMakeFiles/colorchord2.dir/notefinder.c.o: ../colorchord2/filter.h
@@ -190,11 +190,6 @@ colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o: ../colorchord2/os_generi
 colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o: ../colorchord2/parameters.h
 colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o: ../colorchord2/sound.h
 colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o: ../colorchord2/sound_pulse.c
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o: ../colorchord2/os_generic.h
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o: ../colorchord2/parameters.h
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o: ../colorchord2/sound.h
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o: ../colorchord2/sound_win.c
 
 colorchord2/CMakeFiles/colorchord2.dir/util.c.o: ../colorchord2/util.c
 colorchord2/CMakeFiles/colorchord2.dir/util.c.o: ../colorchord2/util.h

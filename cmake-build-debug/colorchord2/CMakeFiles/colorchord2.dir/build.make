@@ -273,33 +273,9 @@ colorchord2/CMakeFiles/colorchord2.dir/outdrivers.c.o.provides: colorchord2/CMak
 colorchord2/CMakeFiles/colorchord2.dir/outdrivers.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/outdrivers.c.o
 
 
-colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o: ../colorchord2/DrawFunctions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DrawFunctions.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.c
-
-colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DrawFunctions.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.c > CMakeFiles/colorchord2.dir/DrawFunctions.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DrawFunctions.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.c -o CMakeFiles/colorchord2.dir/DrawFunctions.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o
-
-
 colorchord2/CMakeFiles/colorchord2.dir/parameters.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/parameters.c.o: ../colorchord2/parameters.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object colorchord2/CMakeFiles/colorchord2.dir/parameters.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object colorchord2/CMakeFiles/colorchord2.dir/parameters.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/parameters.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/parameters.c
 
 colorchord2/CMakeFiles/colorchord2.dir/parameters.c.i: cmake_force
@@ -323,7 +299,7 @@ colorchord2/CMakeFiles/colorchord2.dir/parameters.c.o.provides.build: colorchord
 
 colorchord2/CMakeFiles/colorchord2.dir/chash.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/chash.c.o: ../colorchord2/chash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object colorchord2/CMakeFiles/colorchord2.dir/chash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object colorchord2/CMakeFiles/colorchord2.dir/chash.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/chash.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/chash.c
 
 colorchord2/CMakeFiles/colorchord2.dir/chash.c.i: cmake_force
@@ -345,249 +321,9 @@ colorchord2/CMakeFiles/colorchord2.dir/chash.c.o.provides: colorchord2/CMakeFile
 colorchord2/CMakeFiles/colorchord2.dir/chash.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/chash.c.o
 
 
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o: ../colorchord2/WinDriver.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/WinDriver.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/WinDriver.c
-
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/WinDriver.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/WinDriver.c > CMakeFiles/colorchord2.dir/WinDriver.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/WinDriver.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/WinDriver.c -o CMakeFiles/colorchord2.dir/WinDriver.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/sound.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/sound.c.o: ../colorchord2/sound.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object colorchord2/CMakeFiles/colorchord2.dir/sound.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/sound.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/sound.c
-
-colorchord2/CMakeFiles/colorchord2.dir/sound.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/sound.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/sound.c > CMakeFiles/colorchord2.dir/sound.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/sound.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/sound.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/sound.c -o CMakeFiles/colorchord2.dir/sound.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/sound.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o: ../colorchord2/sound_null.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/sound_null.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_null.c
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/sound_null.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_null.c > CMakeFiles/colorchord2.dir/sound_null.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/sound_null.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_null.c -o CMakeFiles/colorchord2.dir/sound_null.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o: ../colorchord2/sound_win.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/sound_win.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_win.c
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/sound_win.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_win.c > CMakeFiles/colorchord2.dir/sound_win.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/sound_win.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_win.c -o CMakeFiles/colorchord2.dir/sound_win.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o: ../colorchord2/OutputVoronoi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/OutputVoronoi.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputVoronoi.c
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/OutputVoronoi.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputVoronoi.c > CMakeFiles/colorchord2.dir/OutputVoronoi.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/OutputVoronoi.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputVoronoi.c -o CMakeFiles/colorchord2.dir/OutputVoronoi.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o: ../colorchord2/OutputProminent.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/OutputProminent.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputProminent.c
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/OutputProminent.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputProminent.c > CMakeFiles/colorchord2.dir/OutputProminent.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/OutputProminent.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputProminent.c -o CMakeFiles/colorchord2.dir/OutputProminent.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o: ../colorchord2/DisplayArray.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayArray.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayArray.c
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DisplayArray.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayArray.c > CMakeFiles/colorchord2.dir/DisplayArray.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DisplayArray.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayArray.c -o CMakeFiles/colorchord2.dir/DisplayArray.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o: ../colorchord2/OutputLinear.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/OutputLinear.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputLinear.c
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/OutputLinear.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputLinear.c > CMakeFiles/colorchord2.dir/OutputLinear.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/OutputLinear.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputLinear.c -o CMakeFiles/colorchord2.dir/OutputLinear.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o: ../colorchord2/DisplayPie.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayPie.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayPie.c
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DisplayPie.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayPie.c > CMakeFiles/colorchord2.dir/DisplayPie.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DisplayPie.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayPie.c -o CMakeFiles/colorchord2.dir/DisplayPie.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o: ../colorchord2/DisplayNetwork.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayNetwork.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayNetwork.c
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DisplayNetwork.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayNetwork.c > CMakeFiles/colorchord2.dir/DisplayNetwork.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DisplayNetwork.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayNetwork.c -o CMakeFiles/colorchord2.dir/DisplayNetwork.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o
-
-
 colorchord2/CMakeFiles/colorchord2.dir/hook.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/hook.c.o: ../colorchord2/hook.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object colorchord2/CMakeFiles/colorchord2.dir/hook.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object colorchord2/CMakeFiles/colorchord2.dir/hook.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/hook.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/hook.c
 
 colorchord2/CMakeFiles/colorchord2.dir/hook.c.i: cmake_force
@@ -609,33 +345,9 @@ colorchord2/CMakeFiles/colorchord2.dir/hook.c.o.provides: colorchord2/CMakeFiles
 colorchord2/CMakeFiles/colorchord2.dir/hook.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/hook.c.o
 
 
-colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o: ../colorchord2/RecorderPlugin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/RecorderPlugin.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/RecorderPlugin.c
-
-colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/RecorderPlugin.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/RecorderPlugin.c > CMakeFiles/colorchord2.dir/RecorderPlugin.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/RecorderPlugin.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/RecorderPlugin.c -o CMakeFiles/colorchord2.dir/RecorderPlugin.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o
-
-
 colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o: ../embeddedcommon/DFT32.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o   -c /home/ragebone/Documents/VCS/colorchord/embeddedcommon/DFT32.c
 
 colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.i: cmake_force
@@ -657,33 +369,9 @@ colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o.provides: col
 colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o
 
 
-colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o: ../colorchord2/OutputCells.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/OutputCells.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputCells.c
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/OutputCells.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputCells.c > CMakeFiles/colorchord2.dir/OutputCells.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/OutputCells.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputCells.c -o CMakeFiles/colorchord2.dir/OutputCells.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o
-
-
 colorchord2/CMakeFiles/colorchord2.dir/configs.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/configs.c.o: ../colorchord2/configs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object colorchord2/CMakeFiles/colorchord2.dir/configs.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object colorchord2/CMakeFiles/colorchord2.dir/configs.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/configs.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/configs.c
 
 colorchord2/CMakeFiles/colorchord2.dir/configs.c.i: cmake_force
@@ -705,57 +393,33 @@ colorchord2/CMakeFiles/colorchord2.dir/configs.c.o.provides: colorchord2/CMakeFi
 colorchord2/CMakeFiles/colorchord2.dir/configs.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/configs.c.o
 
 
-colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o: ../colorchord2/hidapi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/hidapi.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/hidapi.c
+colorchord2/CMakeFiles/colorchord2.dir/sound.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/sound.c.o: ../colorchord2/sound.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object colorchord2/CMakeFiles/colorchord2.dir/sound.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/sound.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/sound.c
 
-colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/hidapi.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/hidapi.c > CMakeFiles/colorchord2.dir/hidapi.c.i
+colorchord2/CMakeFiles/colorchord2.dir/sound.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/sound.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/sound.c > CMakeFiles/colorchord2.dir/sound.c.i
 
-colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/hidapi.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/hidapi.c -o CMakeFiles/colorchord2.dir/hidapi.c.s
+colorchord2/CMakeFiles/colorchord2.dir/sound.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/sound.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/sound.c -o CMakeFiles/colorchord2.dir/sound.c.s
 
-colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.requires:
+colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.requires:
 
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.requires
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.requires
 
-colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.provides
+colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.provides
 
-colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o
-
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
-colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o: ../colorchord2/DisplayHIDAPI.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayHIDAPI.c
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.i"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayHIDAPI.c > CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.i
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.s"
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayHIDAPI.c -o CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.s
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.requires:
-
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.requires
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.requires
-	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.provides.build
-.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.provides
-
-colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o
+colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/sound.c.o
 
 
 colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o: ../colorchord2/sound_alsa.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/sound_alsa.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_alsa.c
 
 colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.i: cmake_force
@@ -779,7 +443,7 @@ colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o.provides.build: colorchord
 
 colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o: ../colorchord2/sound_pulse.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/sound_pulse.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_pulse.c
 
 colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.i: cmake_force
@@ -801,9 +465,153 @@ colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o.provides: colorchord2/CMa
 colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o
 
 
+colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o: ../colorchord2/sound_null.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/sound_null.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_null.c
+
+colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/sound_null.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_null.c > CMakeFiles/colorchord2.dir/sound_null.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/sound_null.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_null.c -o CMakeFiles/colorchord2.dir/sound_null.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o
+
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o: ../colorchord2/OutputVoronoi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/OutputVoronoi.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputVoronoi.c
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/OutputVoronoi.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputVoronoi.c > CMakeFiles/colorchord2.dir/OutputVoronoi.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/OutputVoronoi.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputVoronoi.c -o CMakeFiles/colorchord2.dir/OutputVoronoi.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o
+
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o: ../colorchord2/DisplayArray.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayArray.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayArray.c
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DisplayArray.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayArray.c > CMakeFiles/colorchord2.dir/DisplayArray.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DisplayArray.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayArray.c -o CMakeFiles/colorchord2.dir/DisplayArray.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o
+
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o: ../colorchord2/OutputLinear.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/OutputLinear.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputLinear.c
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/OutputLinear.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputLinear.c > CMakeFiles/colorchord2.dir/OutputLinear.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/OutputLinear.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputLinear.c -o CMakeFiles/colorchord2.dir/OutputLinear.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o
+
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o: ../colorchord2/DisplayPie.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayPie.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayPie.c
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DisplayPie.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayPie.c > CMakeFiles/colorchord2.dir/DisplayPie.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DisplayPie.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayPie.c -o CMakeFiles/colorchord2.dir/DisplayPie.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o
+
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o: ../colorchord2/DisplayNetwork.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayNetwork.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayNetwork.c
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DisplayNetwork.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayNetwork.c > CMakeFiles/colorchord2.dir/DisplayNetwork.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DisplayNetwork.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayNetwork.c -o CMakeFiles/colorchord2.dir/DisplayNetwork.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o
+
+
 colorchord2/CMakeFiles/colorchord2.dir/DisplayUSB2812.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/DisplayUSB2812.c.o: ../colorchord2/DisplayUSB2812.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayUSB2812.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayUSB2812.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayUSB2812.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayUSB2812.c
 
 colorchord2/CMakeFiles/colorchord2.dir/DisplayUSB2812.c.i: cmake_force
@@ -827,7 +635,7 @@ colorchord2/CMakeFiles/colorchord2.dir/DisplayUSB2812.c.o.provides.build: colorc
 
 colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.o: ../colorchord2/DisplayDMX.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayDMX.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayDMX.c
 
 colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.i: cmake_force
@@ -849,9 +657,129 @@ colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.o.provides: colorchord2/CMak
 colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.o
 
 
+colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o: ../colorchord2/OutputProminent.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/OutputProminent.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputProminent.c
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/OutputProminent.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputProminent.c > CMakeFiles/colorchord2.dir/OutputProminent.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/OutputProminent.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputProminent.c -o CMakeFiles/colorchord2.dir/OutputProminent.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o
+
+
+colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o: ../colorchord2/RecorderPlugin.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/RecorderPlugin.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/RecorderPlugin.c
+
+colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/RecorderPlugin.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/RecorderPlugin.c > CMakeFiles/colorchord2.dir/RecorderPlugin.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/RecorderPlugin.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/RecorderPlugin.c -o CMakeFiles/colorchord2.dir/RecorderPlugin.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o
+
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o: ../colorchord2/DisplayHIDAPI.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayHIDAPI.c
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayHIDAPI.c > CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayHIDAPI.c -o CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o
+
+
+colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o: ../colorchord2/hidapi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/hidapi.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/hidapi.c
+
+colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/hidapi.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/hidapi.c > CMakeFiles/colorchord2.dir/hidapi.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/hidapi.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/hidapi.c -o CMakeFiles/colorchord2.dir/hidapi.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o
+
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o: ../colorchord2/OutputCells.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/OutputCells.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputCells.c
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/OutputCells.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputCells.c > CMakeFiles/colorchord2.dir/OutputCells.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/OutputCells.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/OutputCells.c -o CMakeFiles/colorchord2.dir/OutputCells.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o
+
+
 colorchord2/CMakeFiles/colorchord2.dir/DisplaySHM.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/DisplaySHM.c.o: ../colorchord2/DisplaySHM.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplaySHM.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplaySHM.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplaySHM.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplaySHM.c
 
 colorchord2/CMakeFiles/colorchord2.dir/DisplaySHM.c.i: cmake_force
@@ -875,7 +803,7 @@ colorchord2/CMakeFiles/colorchord2.dir/DisplaySHM.c.o.provides.build: colorchord
 
 colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o: ../colorchord2/DisplayFileWrite.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DisplayFileWrite.c
 
 colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.i: cmake_force
@@ -897,9 +825,33 @@ colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o.provides: colorchord
 colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o
 
 
+colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
+colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o: ../colorchord2/DrawFunctions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/DrawFunctions.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.c
+
+colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/colorchord2.dir/DrawFunctions.c.i"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.c > CMakeFiles/colorchord2.dir/DrawFunctions.c.i
+
+colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/colorchord2.dir/DrawFunctions.c.s"
+	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.c -o CMakeFiles/colorchord2.dir/DrawFunctions.c.s
+
+colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.requires:
+
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.requires
+
+colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.provides: colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.requires
+	$(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.provides.build
+.PHONY : colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.provides
+
+colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.provides.build: colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o
+
+
 colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o: colorchord2/CMakeFiles/colorchord2.dir/flags.make
 colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o: ../colorchord2/XDriver.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/colorchord2.dir/XDriver.c.o   -c /home/ragebone/Documents/VCS/colorchord/colorchord2/XDriver.c
 
 colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.i: cmake_force
@@ -932,32 +884,30 @@ colorchord2_OBJECTS = \
 "CMakeFiles/colorchord2.dir/notefinder.c.o" \
 "CMakeFiles/colorchord2.dir/util.c.o" \
 "CMakeFiles/colorchord2.dir/outdrivers.c.o" \
-"CMakeFiles/colorchord2.dir/DrawFunctions.c.o" \
 "CMakeFiles/colorchord2.dir/parameters.c.o" \
 "CMakeFiles/colorchord2.dir/chash.c.o" \
-"CMakeFiles/colorchord2.dir/WinDriver.c.o" \
+"CMakeFiles/colorchord2.dir/hook.c.o" \
+"CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o" \
+"CMakeFiles/colorchord2.dir/configs.c.o" \
 "CMakeFiles/colorchord2.dir/sound.c.o" \
+"CMakeFiles/colorchord2.dir/sound_alsa.c.o" \
+"CMakeFiles/colorchord2.dir/sound_pulse.c.o" \
 "CMakeFiles/colorchord2.dir/sound_null.c.o" \
-"CMakeFiles/colorchord2.dir/sound_win.c.o" \
 "CMakeFiles/colorchord2.dir/OutputVoronoi.c.o" \
-"CMakeFiles/colorchord2.dir/OutputProminent.c.o" \
 "CMakeFiles/colorchord2.dir/DisplayArray.c.o" \
 "CMakeFiles/colorchord2.dir/OutputLinear.c.o" \
 "CMakeFiles/colorchord2.dir/DisplayPie.c.o" \
 "CMakeFiles/colorchord2.dir/DisplayNetwork.c.o" \
-"CMakeFiles/colorchord2.dir/hook.c.o" \
-"CMakeFiles/colorchord2.dir/RecorderPlugin.c.o" \
-"CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o" \
-"CMakeFiles/colorchord2.dir/OutputCells.c.o" \
-"CMakeFiles/colorchord2.dir/configs.c.o" \
-"CMakeFiles/colorchord2.dir/hidapi.c.o" \
-"CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o" \
-"CMakeFiles/colorchord2.dir/sound_alsa.c.o" \
-"CMakeFiles/colorchord2.dir/sound_pulse.c.o" \
 "CMakeFiles/colorchord2.dir/DisplayUSB2812.c.o" \
 "CMakeFiles/colorchord2.dir/DisplayDMX.c.o" \
+"CMakeFiles/colorchord2.dir/OutputProminent.c.o" \
+"CMakeFiles/colorchord2.dir/RecorderPlugin.c.o" \
+"CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o" \
+"CMakeFiles/colorchord2.dir/hidapi.c.o" \
+"CMakeFiles/colorchord2.dir/OutputCells.c.o" \
 "CMakeFiles/colorchord2.dir/DisplaySHM.c.o" \
 "CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o" \
+"CMakeFiles/colorchord2.dir/DrawFunctions.c.o" \
 "CMakeFiles/colorchord2.dir/XDriver.c.o"
 
 # External object files for target colorchord2
@@ -972,36 +922,34 @@ colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/color.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/notefinder.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/util.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/outdrivers.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/parameters.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/chash.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/hook.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/configs.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/sound.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/hook.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/configs.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o
-colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DisplayUSB2812.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DisplaySHM.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o
+colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/build.make
 colorchord2/colorchord2: colorchord2/CMakeFiles/colorchord2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking C executable colorchord2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Linking C executable colorchord2"
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/colorchord2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1018,32 +966,30 @@ colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorcho
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/notefinder.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/util.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/outdrivers.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/parameters.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/chash.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/hook.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/configs.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/sound.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DisplayArray.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/OutputLinear.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DisplayPie.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DisplayNetwork.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/hook.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/configs.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o.requires
-colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DisplayUSB2812.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DisplayDMX.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DisplayHIDAPI.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/hidapi.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/OutputCells.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DisplaySHM.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DisplayFileWrite.c.o.requires
+colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/DrawFunctions.c.o.requires
 colorchord2/CMakeFiles/colorchord2.dir/requires: colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o.requires
 
 .PHONY : colorchord2/CMakeFiles/colorchord2.dir/requires

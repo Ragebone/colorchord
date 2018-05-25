@@ -503,33 +503,6 @@ RecorderPlugin.c.s:
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug && $(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.s
 .PHONY : RecorderPlugin.c.s
 
-WinDriver.o: WinDriver.c.o
-
-.PHONY : WinDriver.o
-
-# target to build an object file
-WinDriver.c.o:
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug && $(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o
-.PHONY : WinDriver.c.o
-
-WinDriver.i: WinDriver.c.i
-
-.PHONY : WinDriver.i
-
-# target to preprocess a source file
-WinDriver.c.i:
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug && $(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.i
-.PHONY : WinDriver.c.i
-
-WinDriver.s: WinDriver.c.s
-
-.PHONY : WinDriver.s
-
-# target to generate assembly for a file
-WinDriver.c.s:
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug && $(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.s
-.PHONY : WinDriver.c.s
-
 XDriver.o: XDriver.c.o
 
 .PHONY : XDriver.o
@@ -1043,33 +1016,6 @@ sound_pulse.c.s:
 	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug && $(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.s
 .PHONY : sound_pulse.c.s
 
-sound_win.o: sound_win.c.o
-
-.PHONY : sound_win.o
-
-# target to build an object file
-sound_win.c.o:
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug && $(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o
-.PHONY : sound_win.c.o
-
-sound_win.i: sound_win.c.i
-
-.PHONY : sound_win.i
-
-# target to preprocess a source file
-sound_win.c.i:
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug && $(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.i
-.PHONY : sound_win.c.i
-
-sound_win.s: sound_win.c.s
-
-.PHONY : sound_win.s
-
-# target to generate assembly for a file
-sound_win.c.s:
-	cd /home/ragebone/Documents/VCS/colorchord/cmake-build-debug && $(MAKE) -f colorchord2/CMakeFiles/colorchord2.dir/build.make colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.s
-.PHONY : sound_win.c.s
-
 util.o: util.c.o
 
 .PHONY : util.o
@@ -1148,9 +1094,6 @@ help:
 	@echo "... RecorderPlugin.o"
 	@echo "... RecorderPlugin.i"
 	@echo "... RecorderPlugin.s"
-	@echo "... WinDriver.o"
-	@echo "... WinDriver.i"
-	@echo "... WinDriver.s"
 	@echo "... XDriver.o"
 	@echo "... XDriver.i"
 	@echo "... XDriver.s"
@@ -1208,9 +1151,6 @@ help:
 	@echo "... sound_pulse.o"
 	@echo "... sound_pulse.i"
 	@echo "... sound_pulse.s"
-	@echo "... sound_win.o"
-	@echo "... sound_win.i"
-	@echo "... sound_win.s"
 	@echo "... util.o"
 	@echo "... util.i"
 	@echo "... util.s"

@@ -101,13 +101,11 @@ colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o
  /home/ragebone/Documents/VCS/colorchord/colorchord2/os_generic.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/outdrivers.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/parameters.h
-colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o
- /home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.h
- /home/ragebone/Documents/VCS/colorchord/colorchord2/WinDriver.c
 colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o
  /home/ragebone/Documents/VCS/colorchord/colorchord2/DrawFunctions.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/XDriver.c
 colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o
+ /home/ragebone/Documents/VCS/colorchord/colorchord2/ccconfig.h
  /home/ragebone/Documents/VCS/colorchord/embeddedcommon/DFT32.c
  /home/ragebone/Documents/VCS/colorchord/embeddedcommon/DFT32.h
 colorchord2/CMakeFiles/colorchord2.dir/chash.c.o
@@ -119,6 +117,7 @@ colorchord2/CMakeFiles/colorchord2.dir/color.c.o
 colorchord2/CMakeFiles/colorchord2.dir/configs.c.o
  /home/ragebone/Documents/VCS/colorchord/colorchord2/configs.c
  /home/ragebone/Documents/VCS/colorchord/colorchord2/configs.h
+ /home/ragebone/Documents/VCS/colorchord/colorchord2/os_generic.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/parameters.h
 colorchord2/CMakeFiles/colorchord2.dir/decompose.c.o
  /home/ragebone/Documents/VCS/colorchord/colorchord2/decompose.c
@@ -152,6 +151,7 @@ colorchord2/CMakeFiles/colorchord2.dir/main.c.o
  /home/ragebone/Documents/VCS/colorchord/colorchord2/parameters.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/sound.h
 colorchord2/CMakeFiles/colorchord2.dir/notefinder.c.o
+ /home/ragebone/Documents/VCS/colorchord/colorchord2/ccconfig.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/decompose.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/dft.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/filter.h
@@ -191,11 +191,6 @@ colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o
  /home/ragebone/Documents/VCS/colorchord/colorchord2/parameters.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/sound.h
  /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_pulse.c
-colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o
- /home/ragebone/Documents/VCS/colorchord/colorchord2/os_generic.h
- /home/ragebone/Documents/VCS/colorchord/colorchord2/parameters.h
- /home/ragebone/Documents/VCS/colorchord/colorchord2/sound.h
- /home/ragebone/Documents/VCS/colorchord/colorchord2/sound_win.c
 colorchord2/CMakeFiles/colorchord2.dir/util.c.o
  /home/ragebone/Documents/VCS/colorchord/colorchord2/util.c
  /home/ragebone/Documents/VCS/colorchord/colorchord2/util.h

@@ -18,7 +18,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/ragebone/Documents/VCS/colorchord/colorchord2/OutputProminent.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/OutputProminent.c.o"
   "/home/ragebone/Documents/VCS/colorchord/colorchord2/OutputVoronoi.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/OutputVoronoi.c.o"
   "/home/ragebone/Documents/VCS/colorchord/colorchord2/RecorderPlugin.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/RecorderPlugin.c.o"
-  "/home/ragebone/Documents/VCS/colorchord/colorchord2/WinDriver.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/WinDriver.c.o"
   "/home/ragebone/Documents/VCS/colorchord/colorchord2/XDriver.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/XDriver.c.o"
   "/home/ragebone/Documents/VCS/colorchord/embeddedcommon/DFT32.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/__/embeddedcommon/DFT32.c.o"
   "/home/ragebone/Documents/VCS/colorchord/colorchord2/chash.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/chash.c.o"
@@ -38,7 +37,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/ragebone/Documents/VCS/colorchord/colorchord2/sound_alsa.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/sound_alsa.c.o"
   "/home/ragebone/Documents/VCS/colorchord/colorchord2/sound_null.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/sound_null.c.o"
   "/home/ragebone/Documents/VCS/colorchord/colorchord2/sound_pulse.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/sound_pulse.c.o"
-  "/home/ragebone/Documents/VCS/colorchord/colorchord2/sound_win.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/sound_win.c.o"
   "/home/ragebone/Documents/VCS/colorchord/colorchord2/util.c" "/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir/util.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
