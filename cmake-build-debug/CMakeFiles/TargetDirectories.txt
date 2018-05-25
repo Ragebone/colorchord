@@ -1,0 +1,5 @@
+/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/rebuild_cache.dir
+/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/edit_cache.dir
+/home/ragebone/Documents/VCS/colorchord/cmake-build-debug/colorchord2/CMakeFiles/colorchord2.dir

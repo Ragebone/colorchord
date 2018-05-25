@@ -10,7 +10,7 @@
 #include "dft.h"
 #include "filter.h"
 #include "decompose.h"
-#include "DFT32.h"
+#include "../embeddedcommon/DFT32.h"
 
 struct NoteFinder * CreateNoteFinder( int spsRec )
 {
