@@ -1,4 +1,0 @@
-/home/ragebone/.local/share/JetBrains/Toolbox/apps/CLion/ch-1/181.4668.70/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/ragebone/Documents/VCS/colorchord
--- Configuring done
--- Generating done
--- Build files have been written to: /home/ragebone/Documents/VCS/colorchord/cmake-build-debug
