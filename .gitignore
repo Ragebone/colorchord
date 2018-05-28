@@ -15,3 +15,5 @@ cmake-build-debug/colorchord2/CMakeFiles/colorchord2\.dir/build\.make
 cmake-build-debug/colorchord2/Makefile
 
 cmake-build-debug/Makefile
+
+*.o
