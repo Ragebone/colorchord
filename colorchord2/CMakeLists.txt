@@ -12,7 +12,7 @@ add_executable(colorchord2 main.c
 
         #OUTS
         OutputVoronoi.c DisplayArray.c OutputLinear.c DisplayPie.c DisplayNetwork.c DisplayUSB2812.c DisplayDMX.c OutputProminent.c RecorderPlugin.c DisplayHIDAPI.c hidapi.c OutputCells.c DisplaySHM.c DisplayFileWrite.c
-
+        OutputRaw.c
         #RawDraw
         DrawFunctions.c XDriver.c
 
