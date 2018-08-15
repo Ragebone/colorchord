@@ -17,9 +17,14 @@
 struct RawDriver
 {
 	int did_init;
-	int total_leds;
-	int is_loop;
+	int total_leds; // don't need that here
+	float satamp; // global Amplification setting.
+};
+
+
+struct rawOutput{
 	float satamp;
+
 };
 
 // driver update method.
@@ -27,47 +32,49 @@ static void LEDUpdate(void * id, struct NoteFinder*nf)
 {
 	struct RawDriver * led = (struct RawDriver*)id;
 
+	// Declare Variables.
 
-	//Step 1: Calculate the quantity of all the LEDs we'll want.
 	int totbins = nf->note_peaks;	//nf->dists;
-	int i, j;
+
+	// Bin as in english BIN -> bucket of things.
+	// declare floatArrays, length of total bins
 	float binvals[totbins];
 	float binvalsQ[totbins];
 	float binpos[totbins];
 	float totalbinval = 0;
 
-//	if( totbins > led_bins ) totbins = led_bins;
+	int i;
+
+	// Begin of Output-Frame
+	printf("frame, totBins: %d \n", totbins);
+
+	// output: setamp
+	// output: totBins
 
 	for( i = 0; i < totbins; i++ )
 	{
-
-		printf("nP: %f nA2: %f nA: %f\n", nf->note_positions[i], nf->note_amplitudes2[i], nf->note_amplitudes[i]);
+		// calculate values
 		binpos[i] = nf->note_positions[i] / nf->freqbins;
 		binvals[i] = pow( nf->note_amplitudes2[i], 1);
-//		binvals[i] = (binvals[i]<led->led_floor)?0:binvals[i];
-//		if( nf->note_positions[i] < 0 ) { binvals[i] = 0; binvalsQ[i] = 0; }
-
 		binvalsQ[i] =pow( nf->note_amplitudes[i], 1);
-		// nf->note_amplitudes[i];//
 		totalbinval += binvals[i];
+
+		// output binPos[i]
+		// output binVals[i]
+		// output binValsQ[i]
+		printf("%f, %f, %f \n",binpos[i], binvals[i], binvalsQ[i]);
 	}
 
+	// output: totalBinVal
+	printf("totBinVal: %f -Frame END \n\n", totalbinval);
+	// End Frame
 
-
-	float newtotal = 0;
-
-	printf("current_note_id %d \n",nf->current_note_id);
 }
 
 static void LEDParams(void * id )
 {
 	struct RawDriver * led = (struct RawDriver*)id;
-
 	led->satamp = 2;		RegisterValue( "satamp", PAFLOAT, &led->satamp, sizeof( led->satamp ) );
-	led->total_leds = 300;	RegisterValue( "leds", PAINT, &led->total_leds, sizeof( led->total_leds ) );
-
-	printf("output via Raw Driver");
-
 }
 
 
