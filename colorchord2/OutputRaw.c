@@ -38,45 +38,33 @@ static void LEDUpdate(void * id, struct NoteFinder*nf)
 	// Declare Variables.
 
 	int totbins = nf->note_peaks;	//nf->dists;
+	int i;
 
 	// Bin as in english BIN -> bucket of things.
 	// declare floatArrays, length of total bins
-	float binvals[totbins];
-	float binvalsQ[totbins];
-	float binpos[totbins];
-	float totalbinval = 0;
+	//float totalbinval = 0;
 
-	int i;
+	write(led->socket, nf->folded_bins, 24*4);
 
+
+/*
+	float sendBuffer[2 * totbins];
 	// Begin of Output-Frame
 	//printf("frame, totBins: %d \n", totbins);
 
 	// output: setamp
 	// output: totBins
 
-	write(led->socket, nf->note_amplitudes, 48);
-	/*
+
+
 	for( i = 0; i < totbins; i++ )
 	{
-		// calculate values
-		binpos[i] = nf->note_positions[i] / nf->freqbins;
-		binvals[i] = pow( nf->note_amplitudes2[i], 1);
-		binvalsQ[i] =pow( nf->note_amplitudes[i], 1);
-		totalbinval += binvals[i];
-
-		// output binPos[i]
-		// output binVals[i]
-		// output binValsQ[i]
-		//printf("%f, %f, %f \n",binpos[i], binvals[i], binvalsQ[i]);
-		//printf("%f ", nf->note_amplitudes[i]);
-
+		//build sendbuffer
+		sendBuffer[2*i] = nf->note_positions[i] / nf->freqbins;
+		sendBuffer[2*i +1]  =nf->note_amplitudes[i];
 	}
-*/
 	printf("\n");
-	// output: totalBinVal
-	//printf("totBinVal: %f -Frame END \n\n", totalbinval);
-	// End Frame
-
+	write(led->socket, sendBuffer, 2 * totbins * sizeof(float));*/
 }
 
 static void LEDParams(void * id )
@@ -99,7 +87,7 @@ static struct DriverInstances * OutputRaw()
 	localAddress.sin_family = AF_INET;
 	localAddress.sin_port = htons(5518);
 	struct hostent *hostinfo;
-	hostinfo = gethostbyname("192.168.1.11");
+	hostinfo = gethostbyname("192.168.178.28");
 	localAddress.sin_addr = *(struct in_addr*) hostinfo->h_addr;
 
 	connect(led->socket, (struct sockaddr*) &localAddress, sizeof(localAddress));
