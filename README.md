@@ -1,5 +1,14 @@
-ColorChord
+ColorChord Cmake Edition #Clion
 ==========
+
+Building with Clion in Linux and Windows
+-------------------------------
+Load the colorchord project.
+After clion finished loading the cmakelists, configure the working direktory in the build configurations that it points at the colorchord2 folder.
+Otherwise colorchord wont find the configs.
+
+That's it! Hopefully : )
+
 
 What is ColorChord?
 -------------------
@@ -41,35 +50,6 @@ ColorChord: Embedded
 --------------------
 
 There is work on an embedded version of ColorChord, which avoids floating point operations anywhere in the output pipeline.  Though I have made efforts to port it to AVRs, it doesn't seem feasable to operate on AVRs without some shifty tricks which I'd like to avoid, so I have retargeted my efforts to 32-bit systems, such as the STM32F303, STM32F407, and (somehow) the ESP8266.  ColorChord Embedded uses a different codebase, located in the [embeddedcommon](/embeddedcommon) and distributed among the various embedded* folders.
-
-
-Building with Linux
------------------
-Use `apt-get` to install the following packages for Debian/Ubuntu/Mint:
-```
-apt-get install libpulse-dev libasound2-dev libx11-dev libxext-dev libxinerama-dev libusb-1.0-0-dev
-```
-
-To make colorchord, type:
-
-```
-make
-```
-Building with Windows
--------------------
-
-With either 64bit or 32bit [MSYS2](https://msys2.github.io/) installed, run the _MSYS2 MSYS_ launcher and use `pacman` to set up a MinGW32 toolchain, if you don't have one already:
-```
-pacman -S mingw-w64-i686-toolchain
-```
-If you see "`/mingw32 exists in filesystem`", you must temporarily rename or relocate the _mingw32.exe_ file at MSYS2's root folder level and try again. Restore _mingw32.exe_ before moving on.
-
-Next, run the _MSYS2 MinGW 32bit_ launcher to access the toolchain. The previously launched _MSYS_ terminal can be closed.
-
-To make colorchord, navigate to your working copy and type:
-```
-mingw32-make colorchord.exe
-```
 
 Using
 -----
