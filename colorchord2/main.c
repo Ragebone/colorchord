@@ -372,7 +372,7 @@ int main(int argc, char ** argv)
 				{
 					float thishistval = CalcHistAt( (float)i/(float)screenx*freqbins-0.5, nf->freqbins, nf->dists, nf->dists_count );
 					if( i >= 0 )
-						CNFGTackSegment( i, 400-lasthistval * 250.0, i+1, 400-thishistval * 250.0 );
+						//CNFGTackSegment( i, 400-lasthistval * 250.0, i+1, 400-thishistval * 250.0 );
 					lasthistval = thishistval;
 				}
 
