@@ -2,17 +2,15 @@
 
 //This file is really rough.  Full duplex doesn't seem to work hardly at all.
 
-
-#include "sound.h"
-#include "os_generic.h"
-#include "parameters.h"
 #include <stdlib.h>
-
 #include <pulse/simple.h>
 #include <pulse/pulseaudio.h>
+#include <pulse/stream.h>
 #include <pulse/error.h>
 #include <stdio.h>
 #include <string.h>
+
+#include "sound.h"
 
 #define BUFFERSETS 3
 
@@ -40,17 +38,22 @@ struct SoundDriverPulse
 	int pa_ready;
 	int buffer;
 	//More fields may exist on a per-sound-driver basis
+
+	// LoopBack things.
+	int pa_null_sink_module_Index;
 };
 
-
-
-void CloseSoundPulse( struct SoundDriverPulse * r );
+static void pa_context_success_cb(pa_context* context, int success, void* userdata);
+static void pa_context_success_cb(pa_context* context, int success, void* userdata){
+    printf("Pulse, null sink removed? success: %d", success);
+}
 
 int SoundStatePulse( struct SoundDriverPulse * soundobject )
 {
 	return ((soundobject->play)?1:0) | ((soundobject->rec)?2:0);
 }
 
+void CloseSoundPulse( struct SoundDriverPulse * r );
 void CloseSoundPulse( struct SoundDriverPulse * r )
 {
 	if( r )
@@ -66,6 +69,11 @@ void CloseSoundPulse( struct SoundDriverPulse * r )
 			pa_stream_unref (r->rec);
 			r->rec = 0;
 		}
+
+		// unregister the null sink
+		printf("removing pulse null sink");
+		pa_context_unload_module(r->pa_ctx, r->pa_null_sink_module_Index, pa_context_success_cb, NULL);
+
 		OGUSleep(2000);
 		OGCancelThread( r->thread );
 		free( r );
@@ -78,10 +86,17 @@ static void * SoundThread( void * v )
 	while(1)
 	{
 		pa_mainloop_iterate( r->pa_ml, 1, NULL );
+
+		if(r->rec){
+		    if(r->play){
+
+		    }
+		}
 	}
 	return 0;
 }
-/*
+	 /*
+
 	int i;
 	int error;
 	struct SoundDriverPulse * r = (struct SoundDriverPulse*)v;
@@ -95,17 +110,23 @@ static void * SoundThread( void * v )
 		bufp[i] = malloc( r->buffer * sizeof(float) * r->channelsPlay  );
 	}
 
-	while( r->play || r->rec )
+	while(1)
 	{
 		i = (i+1)%BUFFERSETS;
 
+
+		pa_mainloop_iterate( r->pa_ml, 1, NULL );
+
 		if( r->rec )
 		{
+
+			/*
 			if (pa_stream_read(r->rec, bufr[i], r->buffer * sizeof(float) * r->channelsRec, &error) < 0) {
 				fprintf(stderr, __FILE__": pa_stream_write() failed: %s\n", pa_strerror(error));
 				pa_stream_unref( r->play );
 				r->rec = 0;
 			}
+
 		}
 
 		int playbacksamples = 0;
@@ -122,8 +143,8 @@ static void * SoundThread( void * v )
 		}
 	}
 
-}*/
-
+}
+*/
 static void stream_request_cb(pa_stream *s, size_t length, void *userdata) {
 //	pa_usec_t usec;
 
@@ -242,6 +263,12 @@ void pa_state_cb(pa_context *c, void *userdata) {
 	}
 }
 
+static void pa_context_index_call_back(pa_context* context, uint32_t index, void* userdata){
+    // shit, we got a callback now.
+    struct SoundDriverPulse * r = userdata;
+    r->pa_null_sink_module_Index = index;
+    printf("Pulse Null-sink index: %d\n",index);
+}
 
 void * InitSoundPulse( SoundCBType cb )
 {
@@ -297,7 +324,7 @@ void * InitSoundPulse( SoundCBType cb )
 
 	if( GetParameterI( "play", 1 ) )
 	{
-		if (!(r->play = pa_stream_new(r->pa_ctx, "Play", &ss, NULL))) {
+		if (!(r->play = pa_stream_new(r->pa_ctx,"play", &ss, NULL))) {
 			error = -3; //XXX ??? TODO
 			fprintf(stderr, __FILE__": pa_simple_new() failed: %s\n", pa_strerror(error));
 			goto fail;
@@ -350,13 +377,24 @@ void * InitSoundPulse( SoundCBType cb )
 		printf( "Got handle: %d\n", ret );
 		if( ret < 0 )
 		{
-			fprintf(stderr, __FILE__": (REC) pa_stream_connect_playback() failed: %s\n", pa_strerror(ret));
+			fprintf(stderr, __FILE__": (REC) pa_stream_connect_record() failed: %s\n", pa_strerror(ret));
 			goto fail;
 		}
 	}
 
-	printf( "Pulse initialized.\n" );
 
+
+	// LoopBack Setup
+
+	// userdata r, the driver struct to later set the modul index.
+	printf("trying to create null sink \n");
+	pa_context_load_module(r->pa_ctx, "module-null-sink", "sink_properties=device.description=colorChord", pa_context_index_call_back, r);
+
+
+
+
+
+	printf( "Pulse initialized.\n" );
 
 //	SoundThread( r );
 	r->thread = OGCreateThread( SoundThread, r );
