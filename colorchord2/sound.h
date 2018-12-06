@@ -3,6 +3,9 @@
 #ifndef _SOUND_H
 #define _SOUND_H
 
+#include "os_generic.h"
+#include "parameters.h"
+
 #define MAX_SOUND_DRIVERS 10
 
 struct SoundDriver;
