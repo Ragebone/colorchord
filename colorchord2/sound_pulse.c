@@ -53,9 +53,15 @@ int SoundStatePulse( struct SoundDriverPulse * soundobject )
 	return ((soundobject->play)?1:0) | ((soundobject->rec)?2:0);
 }
 
-void CloseSoundPulse( struct SoundDriverPulse * r );
-void CloseSoundPulse( struct SoundDriverPulse * r )
+
+struct SoundDriverPulse* g_soundDriverPulse;
+
+
+void CloseSoundPulse();
+void CloseSoundPulse()
 {
+	printf("Closing Sound Pulse");
+	struct SoundDriverPulse * r = g_soundDriverPulse;
 	if( r )
 	{
 		if( r->play )
@@ -286,6 +292,7 @@ void * InitSoundPulse( SoundCBType cb )
 
 	//TODO: pa_context_set_state_callback
 
+	atexit(CloseSoundPulse);
 	r->CloseFn = CloseSoundPulse;
 	r->SoundStateFn = SoundStatePulse;
 	r->callback = cb;
@@ -398,6 +405,7 @@ void * InitSoundPulse( SoundCBType cb )
 
 //	SoundThread( r );
 	r->thread = OGCreateThread( SoundThread, r );
+	g_soundDriverPulse = r;
 	return r;
 
 fail:
