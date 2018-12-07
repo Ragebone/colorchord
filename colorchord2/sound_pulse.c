@@ -278,7 +278,7 @@ void pa_state_cb(pa_context *c, void *userdata) {
 static void pa_context_index_call_back(pa_context* context, uint32_t index, void* userdata){
     // shit, we got a callback now.
     struct SoundDriverPulse * r = userdata;
-    r->pa_null_sink_module_Index = index;
+    r->pa_module_sink_Index = index;
     printf("Pulse Null-sink index: %d\n",index);
 }
 
