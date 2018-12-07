@@ -39,11 +39,14 @@ struct SoundDriverPulse
 	int buffer;
 	//More fields may exist on a per-sound-driver basis
 
-	// LoopBack things.
-	int pa_null_sink_module_Index;
+	// ma sink
+	int pa_module_sink_Index;
 };
 
-static void pa_context_success_cb(pa_context* context, int success, void* userdata);
+// stores pointer to the currently used Driver struct.  For exit and cleanup purpose.
+struct SoundDriverPulse* current_sound_driver;
+
+
 static void pa_context_success_cb(pa_context* context, int success, void* userdata){
     printf("Pulse, null sink removed? success: %d", success);
 }
@@ -61,28 +64,31 @@ void CloseSoundPulse();
 void CloseSoundPulse()
 {
 	printf("Closing Sound Pulse");
-	struct SoundDriverPulse * r = g_soundDriverPulse;
-	if( r )
+	if( current_sound_driver )
 	{
-		if( r->play )
+		if( current_sound_driver->play )
 		{
-			pa_stream_unref (r->play);
-			r->play = 0;
+			pa_stream_unref (current_sound_driver->play);
+            current_sound_driver->play = 0;
 		}
 
-		if( r->rec )
+		if( current_sound_driver->rec )
 		{
-			pa_stream_unref (r->rec);
-			r->rec = 0;
+			pa_stream_unref (current_sound_driver->rec);
+            current_sound_driver->rec = 0;
 		}
 
-		// unregister the null sink
-		printf("removing pulse null sink");
-		pa_context_unload_module(r->pa_ctx, r->pa_null_sink_module_Index, pa_context_success_cb, NULL);
+		// unregister the module sink
+		printf("removing pulse module sink");
+		pa_context_unload_module(current_sound_driver->pa_ctx, current_sound_driver->pa_module_sink_Index, pa_context_success_cb, NULL);
 
-		OGUSleep(2000);
-		OGCancelThread( r->thread );
-		free( r );
+        // Stop the sound thread
+        OGUSleep(2000);
+        OGCancelThread( current_sound_driver->thread );
+
+
+
+		free( current_sound_driver );
 	}
 }
 
@@ -405,7 +411,7 @@ void * InitSoundPulse( SoundCBType cb )
 
 //	SoundThread( r );
 	r->thread = OGCreateThread( SoundThread, r );
-	g_soundDriverPulse = r;
+	current_sound_driver = r;
 	return r;
 
 fail:
