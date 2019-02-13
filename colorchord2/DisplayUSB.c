@@ -1,14 +1,30 @@
-//Copyright 2015 <>< Charles Lohr under the ColorChord License.
-
-#include "outdrivers.h"
-#include "notefinder.h"
 #include <stdio.h>
-#include "parameters.h"
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <termios.h>
+#include <unistd.h>
+
 #include "color.h"
+#include "parameters.h"
 #include "DrawFunctions.h"
+#include "outdrivers.h"
+#include "notefinder.h"
+
+/***
+ *  Display Driver to output raw RGB Bytes to a Serial USB
+ * 	Like an Arduino.
+ *
+ * 	Originally Copyed from DisplayNetwork.
+ * 	Originall Copyright:
+ * 	Copyright 2015 <>< Charles Lohr under the ColorChord License.
+ */
+
 
 #if defined(WIN32) || defined(WINDOWS)
 #include <windows.h>
@@ -32,63 +48,79 @@ struct DPODriver
 	int skipfirst;
 	int fliprg;
 	int firstval;
-	int port;
 	int is_rgby;
-	int oldport;
 	int skittlequantity; //When LEDs are in a ring, backwards and forwards  This is the number of LEDs in the ring.
-	char address[PARAM_BUFF];
-	char oldaddress[PARAM_BUFF];
-	struct sockaddr_in servaddr;
-	int socket;
+
+	char serialPort[PARAM_BUFF];
+	char oldSerialPort[PARAM_BUFF];
+
+	int baudRate;
+	int oldBaudRate;
+
+	int socket;		// File-Descriptor of the socket
 };
+
+int set_interface_attribs(int fd, int speed)
+{
+    struct termios tty;
+
+    if (tcgetattr(fd, &tty) < 0) {
+        printf("Error from tcgetattr: %s\n", strerror(errno));
+        return -1;
+    }
+
+    cfsetospeed(&tty, (speed_t)speed);
+    cfsetispeed(&tty, (speed_t)speed);
+
+    tty.c_cflag |= (CLOCAL | CREAD);    /* ignore modem controls */
+    tty.c_cflag &= ~CSIZE;
+    tty.c_cflag |= CS8;         /* 8-bit characters */
+    tty.c_cflag &= ~PARENB;     /* no parity bit */
+    tty.c_cflag &= ~CSTOPB;     /* only need 1 stop bit */
+    tty.c_cflag &= ~CRTSCTS;    /* no hardware flowcontrol */
+
+    /* setup for non-canonical mode */
+    tty.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INLCR | IGNCR | ICRNL | IXON);
+    tty.c_lflag &= ~(ECHO | ECHONL | ICANON | ISIG | IEXTEN);
+    tty.c_oflag &= ~OPOST;
+
+    /* fetch bytes as they become available */
+    tty.c_cc[VMIN] = 1;
+    tty.c_cc[VTIME] = 1;
+
+    if (tcsetattr(fd, TCSANOW, &tty) != 0) {
+        printf("Error from tcsetattr: %s\n", strerror(errno));
+        return -1;
+    }
+    return 0;
+}
 
 
 static void DPOUpdate(void * id, struct NoteFinder*nf)
 {
-	struct DPODriver * d = (struct DPODriver*)id;
-#ifdef WIN32
-	static int wsa_did_start;
-	if( !wsa_did_start )
-	{
-		
-		WORD wVersionRequested;
-		WSADATA wsaData;
-		int err;
-		wVersionRequested = MAKEWORD(2, 2);
-		err = WSAStartup(wVersionRequested, &wsaData);
-	}
-#endif
+#ifndef WIN32
 
 	int i, j;
+	struct DPODriver * d = (struct DPODriver*)id;
 
-	if( strcmp( d->oldaddress, d->address ) != 0 || d->socket == -1 || d->oldport != d->port )
+	if( strcmp( d->oldSerialPort, d->serialPort ) != 0 || d->socket == -1 || d->oldBaudRate != d->baudRate )
 	{
-		d->socket = socket(AF_INET,SOCK_DGRAM,0);
-
-
-		struct hostent *hname;
-		hname = gethostbyname(d->address);
-
-		if( hname )
+		if( d->socket >= 0 )
 		{
-			memset(&d->servaddr, 0, sizeof(d->servaddr));
-			d->servaddr.sin_family = hname->h_addrtype;
-			d->servaddr.sin_port = htons( d->port );
-			d->servaddr.sin_addr.s_addr = *(long*)hname->h_addr;
-
-			if( d->socket >= 0 )
-			{
-				d->oldport = d->port;
-				memcpy( d->oldaddress, d->address, PARAM_BUFF );
-			}
-			else
-			{
-				fprintf( stderr, "Socket Error.\n" );
-			}
+			d->oldBaudRate = d->baudRate;
+			memcpy( d->oldSerialPort, d->serialPort, PARAM_BUFF );
 		}
 		else
 		{
-			fprintf( stderr, "Error: Cannot find host \"%s\":%d\n", d->address, d->port );
+			d->socket = open(d->serialPort, O_RDWR | O_NOCTTY | O_SYNC);
+
+			if (d->socket < 0) {
+				printf("DisplayUSB Error opening %s: %s\n", d->serialPort, strerror(errno));
+			}
+			int error = set_interface_attribs(d->socket, d->baudRate);
+			if(error < 0){
+				printf("DisplayUSB Error setting interface attributes %s: %s  Baud: %d\n", d->serialPort, strerror(errno), d->baudRate);
+			}
 		}
 	}
 
@@ -187,36 +219,40 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
 				memcpy( buffer, lbuff, i );
 			}
 		}
-
-		int r = sendto( d->socket, buffer, i, MSG_NOSIGNAL,(const struct sockaddr *) &d->servaddr, sizeof( d->servaddr ) );
-		if( r < 0 )
+		// 3 bytes per LED.
+		int bytesWritten = write(d->socket, buffer, d->leds * 3);
+		//tcdrain(d->socket);
+		if( bytesWritten < 0 )
 		{
 			fprintf( stderr, "Send fault.\n" );
-			closesocket( d->socket );
+			close(d->socket);
 			d->socket = -1;
 		}
 	}
-
+#endif
 }
 
 static void DPOParams(void * id )
 {
 	struct DPODriver * d = (struct DPODriver*)id;
-	strcpy( d->address, "localhost" );
+
+	strcpy(d->serialPort, "/dev/ttyACM0"); RegisterValue(  "serialport", PABUFFER, d->serialPort, sizeof( d->serialPort ) );
+	d->oldSerialPort[0] = 0;
+
+	d->baudRate = 115200; RegisterValue("serialbaudrate", PAINT, &d->baudRate, sizeof(d->baudRate));
+	d->oldBaudRate = 0;
 
 	d->leds = 10;		RegisterValue(  "leds", PAINT, &d->leds, sizeof( d->leds ) );
 	d->skipfirst = 1;	RegisterValue(  "skipfirst", PAINT, &d->skipfirst, sizeof( d->skipfirst ) );
-	d->port = 7777;		RegisterValue(  "port", PAINT, &d->port, sizeof( d->port ) );
+
 	d->firstval = 0;	RegisterValue(  "firstval", PAINT, &d->firstval, sizeof( d->firstval ) );
-						RegisterValue(  "address", PABUFFER, d->address, sizeof( d->address ) );
 	d->fliprg = 0;		RegisterValue(  "fliprg", PAINT, &d->fliprg, sizeof( d->fliprg ) );
 	d->is_rgby = 0;		RegisterValue(  "rgby", PAINT, &d->is_rgby, sizeof( d->is_rgby ) );
 	d->skittlequantity=0;RegisterValue(  "skittlequantity", PAINT, &d->skittlequantity, sizeof( d->skittlequantity ) );
 	d->socket = -1;
-	d->oldaddress[0] = 0;
 }
 
-static struct DriverInstances * DisplayNetwork(const char * parameters)
+static struct DriverInstances * DisplayUSB(const char * parameters)
 {
 	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
 	struct DPODriver * d = ret->id = malloc( sizeof( struct DPODriver ) );
@@ -227,6 +263,6 @@ static struct DriverInstances * DisplayNetwork(const char * parameters)
 	return ret;
 }
 
-REGISTER_OUT_DRIVER(DisplayNetwork);
+REGISTER_OUT_DRIVER(DisplayUSB);
 
 

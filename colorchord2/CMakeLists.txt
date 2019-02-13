@@ -10,7 +10,7 @@ if(UNIX)
             #OUTS
             OutputVoronoi.c DisplayArray.c OutputLinear.c DisplayPie.c DisplayNetwork.c DisplayUSB2812.c DisplayDMX.c OutputProminent.c RecorderPlugin.c DisplayHIDAPI.c hidapi.c OutputCells.c DisplaySHM.c DisplayFileWrite.c
             OutputRaw.c
-
+            DisplayUSB.c
             #RawDraw
             DrawFunctions.c XDriver.c
 
