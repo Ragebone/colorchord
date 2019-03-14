@@ -126,7 +126,7 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
 		}
 
         //d->socket = open(d->serialPort, O_NOCTTY | O_SYNC | O_WRONLY | O_NONBLOCK);
-        d->socket = open(d->serialPort, O_NOCTTY | O_SYNC | O_WRONLY );
+        d->socket = open(d->serialPort, O_NOCTTY |  O_WRONLY );
 
         if (d->socket < 0) {
             printf("DisplayUSB Error opening %s: %s\n", d->serialPort, strerror(errno));
@@ -135,6 +135,9 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
         if(error < 0){
             printf("DisplayUSB Error setting interface attributes %s: %s  Baud: %d\n", d->serialPort, strerror(errno), d->baudRate);
         }
+
+        // First time on this socket,  send a delimiter to declare a new update cycle.
+        
 	}
 
 	if( d->socket > 0 )
@@ -189,29 +192,44 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
 
 		// Idea, delimiter can be X 0Bytes because runLength should never be 0. and RL being 0 makes no fucken sense. So if we send for example 5 0 Bytes,
 
+
+
+
+
         // 2 bytes anzahl, 3 Bytes Color.
-        int sumOfRunLength = 0;
+        int bytesWritten, j;
         uint16_t runLength = 0;
-		uint8_t color[3], oldColor[3];
+        uint8_t color[3], oldColor[3];
 
-		oldColor[0] = OutLEDs[0];
-		oldColor[1] = OutLEDs[1];
-		oldColor[2] = OutLEDs[2];
+        // first color = oldColor as preset to start from and never have a RL 0
+        oldColor[0] = OutLEDs[0];
+        oldColor[1] = OutLEDs[1];
+        oldColor[2] = OutLEDs[2];
 
-		int bytesWritten = 0;
-        int j;
+        // Complememnt to serial.
+        bytesWritten = write(d->socket, oldColor, 3);
+        if( bytesWritten < 2 )
+        {
+            fprintf( stderr, "Send fault.\n" );
+            close(d->socket);
+            d->socket = -1;
+            return;
+        }
+
 		for( j = 0; j < d->leds; j++ )
 		{
 			color[0] = OutLEDs[j*3+0]; //GREEN
             color[1] = OutLEDs[j*3+1]; //RED
             color[2] = OutLEDs[j*3+2]; //BLUE
-			if(color[0] != oldColor[0] || color[1] != oldColor[1] || color[2] != oldColor[2] || sumOfRunLength >= d->leds){
 
-			    printf("RL: %d , Color %d %d %d \n", runLength, oldColor[0], oldColor[1], oldColor[2]);
+            // did the color change?
+			if(color[0] != oldColor[0] || color[1] != oldColor[1] || color[2] != oldColor[2]){
+
+			    printf("RL: %d , Color %d %d %d ", runLength, oldColor[0], oldColor[1], oldColor[2]);
 
                 //build and output runLength
 
-                //bytesWritten = write(d->socket, &runLength, 2);
+                bytesWritten = write(d->socket, &runLength, 2);
 
                 if( bytesWritten < 2 )
                 {
@@ -220,9 +238,8 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
                     d->socket = -1;
                     break;
                 }
-                bytesWritten = 0;
-                //Output 3 bytes per Color
-                //bytesWritten = write(d->socket, oldColor, 3);
+                //Output Old Color wtih 3 bytes per Color, as in RGB
+                bytesWritten = write(d->socket, oldColor, 3);
 
                 if( bytesWritten < 3 )
 				{
@@ -231,10 +248,10 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
                     d->socket = -1;
                     break;
                 }
-                bytesWritten = 0;
 
-                //sumOfRunLength += runLength;
-				runLength = 0;
+                // reset RL
+				runLength = 1;
+
 				// make oldColor = color
 				int i;
 				for(i = 0; i <3; i++){
@@ -244,6 +261,40 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
 				runLength ++;
 			}
 		}
+
+        printf("RL: %d , Color %d %d %d ", runLength, oldColor[0], oldColor[1], oldColor[2]);
+
+        //build and output runLength
+
+        bytesWritten = write(d->socket, &runLength, 2);
+
+        if( bytesWritten < 2 )
+        {
+            fprintf( stderr, "Send fault.\n" );
+            close(d->socket);
+            d->socket = -1;
+        }
+        //Output Old Color wtih 3 bytes per Color, as in RGB
+        bytesWritten = write(d->socket, oldColor, 3);
+
+        if( bytesWritten < 3 )
+        {
+            fprintf( stderr, "Send fault.\n" );
+            close(d->socket);
+            d->socket = -1;
+        }
+        // End Delimiter.
+        uint8_t delimiter[7] = {0,0,0,0,0,0,255};
+        bytesWritten = write(d->socket, delimiter, 7);
+
+        if( bytesWritten < 3 )
+        {
+            fprintf( stderr, "Send fault.\n" );
+            close(d->socket);
+            d->socket = -1;
+        }
+
+        printf("\n");
 
 /*
 			if( d->fliprg )
