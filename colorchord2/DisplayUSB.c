@@ -9,6 +9,8 @@
 #include <string.h>
 #include <termios.h>
 #include <unistd.h>
+#include <stdint.h>
+
 
 #include "color.h"
 #include "parameters.h"
@@ -60,47 +62,57 @@ struct DPODriver
 	int socket;		// File-Descriptor of the socket
 };
 
-int set_interface_attribs(int fd, int speed)
-{
-    struct termios tty;
 
-    if (tcgetattr(fd, &tty) < 0) {
-        printf("Error from tcgetattr: %s\n", strerror(errno));
+int set_interface_attribs (int fd, int speed)
+{
+    int parity = 0;
+    struct termios tty;
+    memset (&tty, 0, sizeof tty);
+    if (tcgetattr (fd, &tty) != 0)
+    {
+        printf("error %d from tcgetattr", errno);
         return -1;
     }
 
-    cfsetospeed(&tty, (speed_t)speed);
-    cfsetispeed(&tty, (speed_t)speed);
+    cfsetospeed (&tty, speed);
+    cfsetispeed (&tty, speed);
 
-    tty.c_cflag |= (CLOCAL | CREAD);    /* ignore modem controls */
-    tty.c_cflag &= ~CSIZE;
-    tty.c_cflag |= CS8;         /* 8-bit characters */
-    tty.c_cflag &= ~PARENB;     /* no parity bit */
-    tty.c_cflag &= ~CSTOPB;     /* only need 1 stop bit */
-    tty.c_cflag &= ~CRTSCTS;    /* no hardware flowcontrol */
+    tty.c_cflag = (tty.c_cflag & ~CSIZE) | CS8;     // 8-bit chars
+    // disable IGNBRK for mismatched speed tests; otherwise receive break
+    // as \000 chars
+    tty.c_iflag &= ~IGNBRK;         // disable break processing
+    tty.c_lflag = 0;                // no signaling chars, no echo,
+    // no canonical processing
+    tty.c_oflag = 0;                // no remapping, no delays
+    tty.c_cc[VMIN]  = 0;            // read doesn't block
+    tty.c_cc[VTIME] = 5;            // 0.5 seconds read timeout
 
-    /* setup for non-canonical mode */
-    tty.c_iflag &= ~(IGNBRK | BRKINT | PARMRK | ISTRIP | INLCR | IGNCR | ICRNL | IXON);
-    tty.c_lflag &= ~(ECHO | ECHONL | ICANON | ISIG | IEXTEN);
-    tty.c_oflag &= ~OPOST;
+    tty.c_iflag &= ~(IXON | IXOFF | IXANY); // shut off xon/xoff ctrl
 
-    /* fetch bytes as they become available */
-    tty.c_cc[VMIN] = 1;
-    tty.c_cc[VTIME] = 1;
+    tty.c_cflag |= (CLOCAL | CREAD);// ignore modem controls,
+    // enable reading
+    tty.c_cflag &= ~(PARENB | PARODD);      // shut off parity
+    tty.c_cflag |= parity;
+    tty.c_cflag &= ~CSTOPB;
+    tty.c_cflag &= ~CRTSCTS;
 
-    if (tcsetattr(fd, TCSANOW, &tty) != 0) {
-        printf("Error from tcsetattr: %s\n", strerror(errno));
+    if (tcsetattr (fd, TCSANOW, &tty) != 0)
+    {
+        printf("error %d from tcsetattr", errno);
         return -1;
     }
     return 0;
 }
 
 
+
 static void DPOUpdate(void * id, struct NoteFinder*nf)
 {
 #ifndef WIN32
 
-	int i, j;
+	//int i, j;
+
+
 	struct DPODriver * d = (struct DPODriver*)id;
 
 	if( strcmp( d->oldSerialPort, d->serialPort ) != 0 || d->socket == -1 || d->oldBaudRate != d->baudRate )
@@ -109,23 +121,26 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
 		{
 			d->oldBaudRate = d->baudRate;
 			memcpy( d->oldSerialPort, d->serialPort, PARAM_BUFF );
+            close(d->socket);
+            d->socket = -1;
 		}
-		else
-		{
-			d->socket = open(d->serialPort, O_RDWR | O_NOCTTY | O_SYNC);
 
-			if (d->socket < 0) {
-				printf("DisplayUSB Error opening %s: %s\n", d->serialPort, strerror(errno));
-			}
-			int error = set_interface_attribs(d->socket, d->baudRate);
-			if(error < 0){
-				printf("DisplayUSB Error setting interface attributes %s: %s  Baud: %d\n", d->serialPort, strerror(errno), d->baudRate);
-			}
-		}
+        //d->socket = open(d->serialPort, O_NOCTTY | O_SYNC | O_WRONLY | O_NONBLOCK);
+        d->socket = open(d->serialPort, O_NOCTTY | O_SYNC | O_WRONLY );
+
+        if (d->socket < 0) {
+            printf("DisplayUSB Error opening %s: %s\n", d->serialPort, strerror(errno));
+        }
+        int error = set_interface_attribs(d->socket, d->baudRate);
+        if(error < 0){
+            printf("DisplayUSB Error setting interface attributes %s: %s  Baud: %d\n", d->serialPort, strerror(errno), d->baudRate);
+        }
 	}
 
 	if( d->socket > 0 )
 	{
+
+	    /*
 		uint8_t buffer[MAX_BUFFER];
 		uint8_t lbuff[MAX_BUFFER];
 
@@ -136,7 +151,8 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
 			lbuff[i] = d->firstval;
 			buffer[i++] = d->firstval;
 		}
-
+	     */
+		/*
 		if( d->is_rgby )
 		{
 			i = d->skipfirst;
@@ -169,8 +185,67 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
 				buffer[i++] = y; //Amber
 			}
 		}
-		else
+		 */
+
+		// Idea, delimiter can be X 0Bytes because runLength should never be 0. and RL being 0 makes no fucken sense. So if we send for example 5 0 Bytes,
+
+        // 2 bytes anzahl, 3 Bytes Color.
+        int sumOfRunLength = 0;
+        uint16_t runLength = 0;
+		uint8_t color[3], oldColor[3];
+
+		oldColor[0] = OutLEDs[0];
+		oldColor[1] = OutLEDs[1];
+		oldColor[2] = OutLEDs[2];
+
+		int bytesWritten = 0;
+        int j;
+		for( j = 0; j < d->leds; j++ )
 		{
+			color[0] = OutLEDs[j*3+0]; //GREEN
+            color[1] = OutLEDs[j*3+1]; //RED
+            color[2] = OutLEDs[j*3+2]; //BLUE
+			if(color[0] != oldColor[0] || color[1] != oldColor[1] || color[2] != oldColor[2] || sumOfRunLength >= d->leds){
+
+			    printf("RL: %d , Color %d %d %d \n", runLength, oldColor[0], oldColor[1], oldColor[2]);
+
+                //build and output runLength
+
+                //bytesWritten = write(d->socket, &runLength, 2);
+
+                if( bytesWritten < 2 )
+                {
+                    fprintf( stderr, "Send fault.\n" );
+                    close(d->socket);
+                    d->socket = -1;
+                    break;
+                }
+                bytesWritten = 0;
+                //Output 3 bytes per Color
+                //bytesWritten = write(d->socket, oldColor, 3);
+
+                if( bytesWritten < 3 )
+				{
+                    fprintf( stderr, "Send fault.\n" );
+                    close(d->socket);
+                    d->socket = -1;
+                    break;
+                }
+                bytesWritten = 0;
+
+                //sumOfRunLength += runLength;
+				runLength = 0;
+				// make oldColor = color
+				int i;
+				for(i = 0; i <3; i++){
+				    oldColor[i] = color[i];
+				}
+			}else{
+				runLength ++;
+			}
+		}
+
+/*
 			if( d->fliprg )
 			{
 				for( j = 0; j < d->leds; j++ )
@@ -189,7 +264,8 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
 					lbuff[i++] = OutLEDs[j*3+1];  //GREEN
 				}
 			}
-
+*/
+			/*
 			if( d->skittlequantity )
 			{
 				i = d->skipfirst;
@@ -218,16 +294,13 @@ static void DPOUpdate(void * id, struct NoteFinder*nf)
 			{
 				memcpy( buffer, lbuff, i );
 			}
-		}
+			*/
+
+		/*
 		// 3 bytes per LED.
 		int bytesWritten = write(d->socket, buffer, d->leds * 3);
 		//tcdrain(d->socket);
-		if( bytesWritten < 0 )
-		{
-			fprintf( stderr, "Send fault.\n" );
-			close(d->socket);
-			d->socket = -1;
-		}
+		 */
 	}
 #endif
 }
