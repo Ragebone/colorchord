@@ -59,34 +59,40 @@ int SoundStatePulse( struct SoundDriverPulse * soundobject )
 
 struct SoundDriverPulse* g_soundDriverPulse;
 
-
-void CloseSoundPulse();
+/**
+ * Deconstruct / Close Method.
+ * Called when pulse crashes or when the exithook in main.c fires.
+ *
+ * Main purpose is to remove the fricken combine sink, since if you don't,
+ * you'll end up with 10 bazilion left over sinks in pulse. Which is fricken anoying.
+ */
 void CloseSoundPulse()
 {
-	printf("Closing Sound Pulse");
+	printf("Closing Sound Pulse\n");
 	if( current_sound_driver )
 	{
+		// unregister the module sink
+		printf("removing \"LoppBack\" aka pulse combine sink\n");
+		if(current_sound_driver->pa_module_sink_Index != 0){
+			pa_context_unload_module(current_sound_driver->pa_ctx, current_sound_driver->pa_module_sink_Index, pa_context_success_cb, NULL);
+		}
+
+		// Stop the sound thread
+		OGUSleep(2000);
+		OGCancelThread( current_sound_driver->thread );
+
+		// set atribs to 0 here after the thread was stoped, because otherwise, soundcb will segfault.
 		if( current_sound_driver->play )
 		{
 			pa_stream_unref (current_sound_driver->play);
-            current_sound_driver->play = 0;
+			current_sound_driver->play = 0;
 		}
 
 		if( current_sound_driver->rec )
 		{
 			pa_stream_unref (current_sound_driver->rec);
-            current_sound_driver->rec = 0;
+			current_sound_driver->rec = 0;
 		}
-
-		// unregister the module sink
-		printf("removing pulse module sink");
-		pa_context_unload_module(current_sound_driver->pa_ctx, current_sound_driver->pa_module_sink_Index, pa_context_success_cb, NULL);
-
-        // Stop the sound thread
-        OGUSleep(2000);
-        OGCancelThread( current_sound_driver->thread );
-
-
 
 		free( current_sound_driver );
 	}
@@ -394,17 +400,12 @@ void * InitSoundPulse( SoundCBType cb )
 		}
 	}
 
-
-
 	// LoopBack Setup
-
-	// userdata r, the driver struct to later set the modul index.
-	printf("trying to create null sink \n");
-	pa_context_load_module(r->pa_ctx, "module-null-sink", "sink_properties=device.description=colorChord", pa_context_index_call_back, r);
-
-
-
-
+	if(GetParameterI("loopback", 1)){
+		// userdata r, the driver struct to later set the modul index.
+		printf("trying to create null sink \n");
+		pa_context_load_module(r->pa_ctx, "module-combine-sink", "sink_properties=device.description=colorChord", pa_context_index_call_back, r);
+	}
 
 	printf( "Pulse initialized.\n" );
 
