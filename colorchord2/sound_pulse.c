@@ -298,7 +298,6 @@ void * InitSoundPulse( SoundCBType cb )
 
 	//TODO: pa_context_set_state_callback
 
-	atexit(CloseSoundPulse);
 	r->CloseFn = CloseSoundPulse;
 	r->SoundStateFn = SoundStatePulse;
 	r->callback = cb;
