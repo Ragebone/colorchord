@@ -3,16 +3,17 @@
 //This file is really rough.  Full duplex doesn't seem to work hardly at all.
 
 
-#include "sound.h"
-#include "os_generic.h"
-#include "parameters.h"
-#include <stdlib.h>
-
 #include <pulse/simple.h>
 #include <pulse/pulseaudio.h>
 #include <pulse/error.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
+#include "sound.h"
+
+#include "os_generic.h"
+#include "parameters.h"
 
 #define BUFFERSETS 3
 
@@ -33,99 +34,158 @@ struct SoundDriverPulse
 
 	const char * sourceName;
 	og_thread_t thread;
- 	pa_stream *  	play;
- 	pa_stream *  	rec;
+	pa_stream *  	play;
+	pa_stream *  	rec;
 	pa_context *  pa_ctx;
 	pa_mainloop *pa_ml;
 	int pa_ready;
 	int buffer;
 	//More fields may exist on a per-sound-driver basis
+
+	// identifier of the pulse module.
+	int pa_module_Index;
 };
 
-
-
-void CloseSoundPulse( struct SoundDriverPulse * r );
-
-int SoundStatePulse( struct SoundDriverPulse * soundobject )
-{
+/**
+ *
+ * @param soundobject
+ * @return
+ */
+int SoundStatePulse( struct SoundDriverPulse * soundobject){
 	return ((soundobject->play)?1:0) | ((soundobject->rec)?2:0);
 }
 
-void CloseSoundPulse( struct SoundDriverPulse * r )
-{
-    if( r )
-	{
-        // Stop thread, remove play / rec streams, free driver. Otherwise, SoundThread segfaults.
-        OGUSleep(2000);
-        OGCancelThread( r->thread );
-
-        if( r->play )
-		{
-            pa_stream_unref (r->play);
-            r->play = 0;
-        }
-
-        if( r->rec )
-		{
-            pa_stream_unref (r->rec);
-            r->rec = 0;
-        }
-		free( r );
-	}
+/**
+ *
+ * @param context
+ * @param success
+ * @param userdata
+ *
+ * Pulse callback on context changes. Reportes if change was successfull
+ * Currently only used for the Pulse Module removal
+ */
+static void pa_context_success_cb(pa_context* context, int success, void* userdata){
+	//printf("Pulse module removed: success: %d", success);
 }
 
+/**
+ *
+ * @param sound_driver
+ * Deconstruct / Close Method.
+ * Called when pulse crashes or when the exithook in main.c fires.
+ *
+ * Main purpose is to remove the pulse Module since those persist.
+ */
+void CloseSoundPulse(struct SoundDriverPulse * sound_driver){
+	//printf("Closing Sound Pulse\n");
+	if( sound_driver ){
+		// unload the module sink
+		if(sound_driver->pa_module_Index != 0){
+			printf("removing pulse module\n");
+			pa_context_unload_module(sound_driver->pa_ctx, sound_driver->pa_module_Index, pa_context_success_cb, NULL);
+			sound_driver->pa_module_Index = 0;
+		}
+
+		// Stop the sound thread
+		OGUSleep(2000);
+		OGCancelThread( sound_driver->thread );
+
+		// remove streams.
+		if( sound_driver->play )
+		{
+			pa_stream_unref (sound_driver->play);
+			sound_driver->play = 0;
+		}
+
+		if( sound_driver->rec )
+		{
+			pa_stream_unref (sound_driver->rec);
+			sound_driver->rec = 0;
+		}
+
+		free( sound_driver );
+	}
+}
+/**
+ *
+ * @param v
+ * @return void
+ *
+ * SoundThread that itereates over the PulseAudio main-loop and advances the audio.
+ */
 static void * SoundThread( void * v )
 {
 	struct SoundDriverPulse * r = (struct SoundDriverPulse*)v;
 	while(1)
 	{
 		pa_mainloop_iterate( r->pa_ml, 1, NULL );
+
+		if(r->rec){
+			if(r->play){
+
+			}
+		}
 	}
 	return 0;
 }
 /*
-	int i;
-	int error;
-	struct SoundDriverPulse * r = (struct SoundDriverPulse*)v;
 
-	float * bufr[BUFFERSETS];
-	float * bufp[BUFFERSETS];
+int i;
+int error;
+struct SoundDriverPulse * r = (struct SoundDriverPulse*)v;
 
-	for(i = 0; i < BUFFERSETS; i++ )
-	{
-		bufr[i] = malloc( r->buffer * sizeof(float) * r->channelsRec );
-		bufp[i] = malloc( r->buffer * sizeof(float) * r->channelsPlay  );
-	}
+float * bufr[BUFFERSETS];
+float * bufp[BUFFERSETS];
 
-	while( r->play || r->rec )
-	{
-		i = (i+1)%BUFFERSETS;
+for(i = 0; i < BUFFERSETS; i++ )
+{
+   bufr[i] = malloc( r->buffer * sizeof(float) * r->channelsRec );
+   bufp[i] = malloc( r->buffer * sizeof(float) * r->channelsPlay  );
+}
 
-		if( r->rec )
-		{
-			if (pa_stream_read(r->rec, bufr[i], r->buffer * sizeof(float) * r->channelsRec, &error) < 0) {
-				fprintf(stderr, __FILE__": pa_stream_write() failed: %s\n", pa_strerror(error));
-				pa_stream_unref( r->play );
-				r->rec = 0;
-			}
-		}
+while(1)
+{
+   i = (i+1)%BUFFERSETS;
 
-		int playbacksamples = 0;
-		r->callback( bufp[i], bufr[i], r->buffer, &playbacksamples, (struct SoundDriver*)r );
-		playbacksamples *= sizeof( float ) * r->channelsPlay;
 
-		if( r->play )
-		{
-			if (pa_stream_write(r->play, bufp[i], playbacksamples, NULL, 0LL, PA_SEEK_RELATIVE) < 0) {
-				fprintf(stderr, __FILE__": pa_stream_write() failed: %s\n", pa_strerror(error));
-				pa_stream_unref( r->play );
-				r->play = 0;
-			}
-		}
-	}
+   pa_mainloop_iterate( r->pa_ml, 1, NULL );
 
-}*/
+   if( r->rec )
+   {
 
+       /*
+       if (pa_stream_read(r->rec, bufr[i], r->buffer * sizeof(float) * r->channelsRec, &error) < 0) {
+           fprintf(stderr, __FILE__": pa_stream_write() failed: %s\n", pa_strerror(error));
+           pa_stream_unref( r->play );
+           r->rec = 0;
+       }
+
+   }
+
+   int playbacksamples = 0;
+   r->callback( bufp[i], bufr[i], r->buffer, &playbacksamples, (struct SoundDriver*)r );
+   playbacksamples *= sizeof( float ) * r->channelsPlay;
+
+   if( r->play )
+   {
+       if (pa_stream_write(r->play, bufp[i], playbacksamples, NULL, 0LL, PA_SEEK_RELATIVE) < 0) {
+           fprintf(stderr, __FILE__": pa_stream_write() failed: %s\n", pa_strerror(error));
+           pa_stream_unref( r->play );
+           r->play = 0;
+       }
+   }
+}
+
+}
+*/
+/**
+ *
+ * @param s pa_stream
+ * @param length size_t
+ * @param userdata
+ *
+ *
+ */
 static void stream_request_cb(pa_stream *s, size_t length, void *userdata) {
 //	pa_usec_t usec;
 
@@ -164,7 +224,14 @@ static void stream_request_cb(pa_stream *s, size_t length, void *userdata) {
 
 }
 
-
+/**
+ *
+ * @param s pa_stream, the record-stream
+ * @param length size_t, Bytes in the buffer
+ * @param userdata void*
+ *
+ * Handles the actual Audio input into colorchord if i'm correct.
+ */
 static void stream_record_cb(pa_stream *s, size_t length, void *userdata) {
 //	pa_usec_t usec;
 //	int neg;
@@ -186,14 +253,14 @@ static void stream_record_cb(pa_stream *s, size_t length, void *userdata) {
 	int playbacksamples = 0;
 	float * bufr;
 
-    if (pa_stream_peek(r->rec, (void*)&bufr, &length) < 0) {
-        fprintf(stderr, ("pa_stream_peek() failed: %s\n"), pa_strerror(pa_context_errno(r->pa_ctx)));
-        return;
-    }
+	if (pa_stream_peek(r->rec, (void*)&bufr, &length) < 0) {
+		fprintf(stderr, ("pa_stream_peek() failed: %s\n"), pa_strerror(pa_context_errno(r->pa_ctx)));
+		return;
+	}
 
 	float * buffer;
-    buffer = pa_xmalloc(length);
-    memcpy(buffer, bufr, length);
+	buffer = pa_xmalloc(length);
+	memcpy(buffer, bufr, length);
 	pa_stream_drop(r->rec);
 
 	float bufp[length*r->channelsPlay];
@@ -204,17 +271,22 @@ static void stream_record_cb(pa_stream *s, size_t length, void *userdata) {
 		pa_stream_write(r->play, &bufp, playbacksamples*sizeof(float)*r->channelsPlay, NULL, 0LL, PA_SEEK_RELATIVE);
 }
 
-
-
+/**
+ *
+ * @param s pa_stream
+ * @param userdata What ever the caller sends.  Not currently used
+ *
+ * Callback in case the Stream-Buffer Underflows.
+ */
 static void stream_underflow_cb(pa_stream *s, void *userdata) {
-  // We increase the latency by 50% if we get 6 underflows and latency is under 2s
-  // This is very useful for over the network playback that can't handle low latencies
-  printf("underflow\n");
+	// We increase the latency by 50% if we get 6 underflows and latency is under 2s
+	// This is very useful for over the network playback that can't handle low latencies
+	printf("underflow\n");
 //  underflows++;
 /*  if (underflows >= 6 && latency < 2000000) {
     latency = (latency*3)/2;
     bufattr.maxlength = pa_usec_to_bytes(latency,&ss);
-    bufattr.tlength = pa_usec_to_bytes(latency,&ss);  
+    bufattr.tlength = pa_usec_to_bytes(latency,&ss);
     pa_stream_set_buffer_attr(s, &bufattr, NULL, NULL);
     underflows = 0;
     printf("latency increased to %d\n", latency);
@@ -222,6 +294,28 @@ static void stream_underflow_cb(pa_stream *s, void *userdata) {
 }
 
 
+/**
+ * @param context
+ * @param index
+ * @param userdata
+ *
+ * Pulse Callback on Module loading
+ * Sets the index that the module got.
+ */
+static void pa_context_index_call_back(pa_context* context, uint32_t index, void* userdata){
+	struct SoundDriverPulse * r = userdata;
+	r->pa_module_Index = index;
+	//printf("Pulse module index: %d\n", index);
+}
+
+/**
+ *
+ * @param c  Context, type pa_context
+ * @param userdata, int*. is getting set to 1 if ready, 2 if terminated.
+ *
+ * pulse Audio State CallBack.
+ * probably called when the state changes.
+ */
 void pa_state_cb(pa_context *c, void *userdata) {
 	pa_context_state_t state;
 	int *pa_ready = userdata;
@@ -240,11 +334,17 @@ void pa_state_cb(pa_context *c, void *userdata) {
 			break;
 		case PA_CONTEXT_READY:
 			*pa_ready = 1;
-		break;
+			break;
 	}
 }
 
-
+/**
+ *
+ * @param cb  the driver callBack function
+ * @return void
+ *
+ * Pulse init.
+ */
 void * InitSoundPulse( SoundCBType cb )
 {
 	static pa_buffer_attr bufattr;
@@ -314,10 +414,10 @@ void * InitSoundPulse( SoundCBType cb )
 		bufattr.prebuf =  (uint32_t)-1;
 		bufattr.tlength = bufbytes*3;
 		int ret = pa_stream_connect_playback(r->play, NULL, &bufattr,
-				                    // PA_STREAM_INTERPOLATE_TIMING
-				                    // |PA_STREAM_ADJUST_LATENCY //Some servers don't like the adjust_latency flag.
-				                    // |PA_STREAM_AUTO_TIMING_UPDATE, NULL, NULL);
-					0, NULL, NULL );
+				// PA_STREAM_INTERPOLATE_TIMING
+				// |PA_STREAM_ADJUST_LATENCY //Some servers don't like the adjust_latency flag.
+				// |PA_STREAM_AUTO_TIMING_UPDATE, NULL, NULL);
+											 0, NULL, NULL );
 		printf( "Play stream.\n" );
 		if( ret < 0 )
 		{
@@ -357,6 +457,14 @@ void * InitSoundPulse( SoundCBType cb )
 		}
 	}
 
+	// Pulse Module loading
+	if(GetParameterI("loopback", 1)){
+		// userdata r, the driver struct to later set the modul index.
+		//printf("trying to create pulse module \n");
+		pa_context_load_module(r->pa_ctx, "module-combine-sink", "sink_properties=device.description=colorChord", pa_context_index_call_back, r);
+		// TODO set other usefull Module properties.
+	}
+
 	printf( "Pulse initialized.\n" );
 
 
@@ -364,7 +472,7 @@ void * InitSoundPulse( SoundCBType cb )
 	r->thread = OGCreateThread( SoundThread, r );
 	return r;
 
-fail:
+	fail:
 	if( r )
 	{
 		if( r->play ) pa_xfree (r->play);
@@ -374,8 +482,4 @@ fail:
 	return 0;
 }
 
-
-
 REGISTER_SOUND( PulseSound, 11, "PULSE", InitSoundPulse );
-
-
