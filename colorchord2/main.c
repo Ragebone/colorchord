@@ -242,6 +242,10 @@ int main(int argc, char ** argv)
 		CNFGSetup( title, set_screenx, set_screeny );
 
 
+	/**
+	 * OutputDriver and Display Name Parsing.
+	 *
+	 */
 	char * OutDriverNames = strdup( GetParameterS( "outdrivers", "null" ) );
 	char * ThisDriver = OutDriverNames;
 	char * TDStart;
@@ -265,6 +269,7 @@ int main(int argc, char ** argv)
 		}
 	
 		printf( "Loading: %s\n", TDStart );
+		// This call here actually  creates the driver.
 		outdriver[i] = SetupOutDriver( TDStart );
 	}
 	free(OutDriverNames);
@@ -310,6 +315,11 @@ int main(int argc, char ** argv)
 
 
 		VisTimeStart = OGGetAbsoluteTime();
+
+		/**
+		 * Ittereate through all the outdrivers and displays and give em the Notefinder.
+		 *
+		 */
 
 		for( i = 0; i < MAX_OUT_DRIVERS; i++ )
 		{
