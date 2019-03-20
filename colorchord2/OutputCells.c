@@ -213,11 +213,11 @@ static void LEDParams(void * id )
 }
 
 
-static struct DriverInstances * OutputCells()
+static DriverInstance * OutputCells()
 {
 	int i;
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
-	memset( ret, 0, sizeof( struct DriverInstances ) );
+	DriverInstance * ret = malloc(sizeof(DriverInstance));
+	memset( ret, 0, sizeof(DriverInstance));
 	struct CellsOutDriver * led = ret->id = malloc( sizeof( struct CellsOutDriver ) );
 	memset( led, 0, sizeof( struct CellsOutDriver ) );
 

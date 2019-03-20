@@ -153,9 +153,9 @@ static void DPOParams(void * id )
 	d->note_peaks = 0;
 }
 
-static struct DriverInstances * OutputVoronoi(const char * parameters)
+static struct DriverInstance * OutputVoronoi(const char * parameters)
 {
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
+	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	struct DPODriver * d = ret->id = malloc( sizeof( struct DPODriver ) );
 	memset( d, 0, sizeof( struct DPODriver ) );
 	ret->Func = DPOUpdate;

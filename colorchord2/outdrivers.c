@@ -21,10 +21,10 @@ void NullParams(void * id )
 {
 }
 
-struct DriverInstances * null( )
+struct DriverInstance * null( )
 {
 	printf( "Null lights driver initialized.\n" );
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
+	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	ret->id = 0;
 	ret->Func = NullUpdate;
 	ret->Params = NullParams;
@@ -33,7 +33,7 @@ struct DriverInstances * null( )
 REGISTER_OUT_DRIVER(null);
 
 
-struct DriverInstances * SetupOutDriver( const char * drivername )
+struct DriverInstance * SetupOutDriver( const char * drivername )
 {
 	int i;
 	for( i = 0; i < MAX_OUT_DRIVERS; i++ )
@@ -52,7 +52,7 @@ struct DriverInstances * SetupOutDriver( const char * drivername )
 	return 0;
 }
 
-void RegOutDriver( const char * ron, struct DriverInstances * (*Init)( ) )
+void RegOutDriver( const char * ron, struct DriverInstance * (*Init)( ) )
 {
 	int i;
 	for( i = 0; i < MAX_OUT_DRIVERS; i++ )

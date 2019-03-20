@@ -216,9 +216,9 @@ static void DPOParams(void * id )
 	d->oldaddress[0] = 0;
 }
 
-static struct DriverInstances * DisplayNetwork(const char * parameters)
+static struct DriverInstance * DisplayNetwork(const char * parameters)
 {
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
+	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	struct DPODriver * d = ret->id = malloc( sizeof( struct DPODriver ) );
 	memset( d, 0, sizeof( struct DPODriver ) );
 	ret->Func = DPOUpdate;

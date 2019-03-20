@@ -108,10 +108,10 @@ static void DMXParams(void * id )
 }
 
 
-static struct DriverInstances * DisplayDMX()
+static struct DriverInstance * DisplayDMX()
 {
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
-	memset( ret, 0, sizeof( struct DriverInstances ) );
+	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
+	memset( ret, 0, sizeof( struct DriverInstance ) );
 	struct DMXOutDriver * led = ret->id = malloc( sizeof( struct DMXOutDriver ) );
 	ret->Func = DMXUpdate;
 	ret->Params = DMXParams;

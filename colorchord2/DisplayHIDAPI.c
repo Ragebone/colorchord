@@ -222,10 +222,10 @@ static void LEDParams(void * id )
 }
 
 
-static struct DriverInstances * DisplayHIDAPI()
+static struct DriverInstance * DisplayHIDAPI()
 {
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
-	memset( ret, 0, sizeof( struct DriverInstances ) );
+	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
+	memset( ret, 0, sizeof( struct DriverInstance ) );
 	struct HIDAPIOutDriver * led = ret->id = malloc( sizeof( struct HIDAPIOutDriver ) );
 	ret->Func = LEDUpdate;
 	ret->Params = LEDParams;

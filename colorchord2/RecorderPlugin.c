@@ -187,9 +187,9 @@ static void DPOParams(void * id )
 
 }
 
-static struct DriverInstances * RecorderPlugin(const char * parameters)
+static struct DriverInstance * RecorderPlugin(const char * parameters)
 {
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
+	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	struct RecorderPlugin * rp = ret->id = malloc( sizeof( struct RecorderPlugin ) );
 	memset( rp, 0, sizeof( struct RecorderPlugin ) );
 	ret->Func = DPOUpdate;

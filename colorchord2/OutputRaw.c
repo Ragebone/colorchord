@@ -74,10 +74,10 @@ static void LEDParams(void * id )
 }
 
 
-static struct DriverInstances * OutputRaw()
+static struct DriverInstance * OutputRaw()
 {
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
-	memset( ret, 0, sizeof( struct DriverInstances ) );
+	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
+	memset( ret, 0, sizeof( struct DriverInstance ) );
 	struct RawDriver * led = ret->id = malloc( sizeof( struct RawDriver ) );
 	memset( led, 0, sizeof( struct RawDriver ) );
 

@@ -77,9 +77,9 @@ static void DPOParams(void * id )
 
 }
 
-static struct DriverInstances * DisplayArray(const char * parameters)
+static struct DriverInstance * DisplayArray(const char * parameters)
 {
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
+	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	struct DPODriver * d = ret->id = malloc( sizeof( struct DPODriver ) );
 	memset( d, 0, sizeof( struct DPODriver ) );
 	ret->Func = DPOUpdate;

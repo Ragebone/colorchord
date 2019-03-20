@@ -105,9 +105,9 @@ static void SHMParams(void * id )
 	d->total_leds = 300;	RegisterValue( "leds", PAINT, &d->total_leds, sizeof( d->total_leds ));
 }
 
-static struct DriverInstances * DisplaySHM(const char * parameters)
+static struct DriverInstance * DisplaySHM(const char * parameters)
 {
-	struct DriverInstances * ret = malloc( sizeof( struct DriverInstances ) );
+	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	struct SHMDriver * d = ret->id = malloc( sizeof( struct SHMDriver ) );
 	memset( d, 0, sizeof( struct SHMDriver ) );
 	ret->Func = SHMUpdate;
