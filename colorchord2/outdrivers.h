@@ -30,13 +30,13 @@ struct OutDriverListElem
 	struct DriverInstances * (*Init)();
 };
 
-struct DriverInstances
+typedef struct DriverInstance
 {
 	void * id;
 	void (*Func)(void * id, struct NoteFinder* nf );
 	void (*deconstructDriver)(void * id);
 	void (*Params)(void * id);
-};
+} DriverInstance;
 
 extern struct OutDriverListElem ODList[MAX_OUT_DRIVERS];
 extern const char OutDriverParameters[MAX_OUT_DRIVER_STRING];
@@ -44,8 +44,8 @@ extern const char OutDriverParameters[MAX_OUT_DRIVER_STRING];
 void deconstructDriver(void * id);
 
 //Pass setup "name=[driver]"
-struct DriverInstances * SetupOutDriver( );
-void RegOutDriver( const char * ron, struct DriverInstances * (*Init)( ) );
+DriverInstance * SetupOutDriver( );
+void RegOutDriver( const char * ron, struct DriverInstance * (*Init)( ) );
 
 #define REGISTER_OUT_DRIVER( name ) \
 	void __attribute__((constructor)) REGISTER##name() { RegOutDriver( #name, name ); }
