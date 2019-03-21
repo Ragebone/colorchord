@@ -104,7 +104,7 @@ static void FileWriteParams(void * id )
 static struct DriverInstance * DisplayFileWrite(const char * parameters)
 {
 	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
-	struct FileWriteDriver * d = ret->id = malloc( sizeof( struct FileWriteDriver ) );
+	struct FileWriteDriver * d = ret->driverConfig = malloc( sizeof( struct FileWriteDriver ) );
 	memset( d, 0, sizeof( struct FileWriteDriver ) );
 	ret->Func = FileWriteUpdate;
 	ret->Params = FileWriteParams;

@@ -157,7 +157,7 @@ static struct DriverInstance * DisplayUSB2812()
 {
 	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	memset( ret, 0, sizeof( struct DriverInstance ) );
-	struct LEDOutDriver * led = ret->id = malloc( sizeof( struct LEDOutDriver ) );
+	struct LEDOutDriver * led = ret->driverConfig = malloc( sizeof( struct LEDOutDriver ) );
 	ret->Func = LEDUpdate;
 	ret->Params = LEDParams;
 	OGCreateThread( LEDOutThread, led );

@@ -218,7 +218,7 @@ static DriverInstance * OutputCells()
 	int i;
 	DriverInstance * ret = malloc(sizeof(DriverInstance));
 	memset( ret, 0, sizeof(DriverInstance));
-	struct CellsOutDriver * led = ret->id = malloc( sizeof( struct CellsOutDriver ) );
+	struct CellsOutDriver * led = ret->driverConfig = malloc( sizeof( struct CellsOutDriver ) );
 	memset( led, 0, sizeof( struct CellsOutDriver ) );
 
 	for( i = 0; i < MAX_LEDS; i++ )

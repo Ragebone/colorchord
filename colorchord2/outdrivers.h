@@ -32,7 +32,7 @@ struct OutDriverListElem
 
 typedef struct DriverInstance
 {
-	void * id;
+	void * driverConfig; // param in the following.
 	void (*Func)(void * id, struct NoteFinder* nf );
 	void (*deconstructDriver)(void * id);
 	void (*Params)(void * id);

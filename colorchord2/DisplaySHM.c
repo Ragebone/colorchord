@@ -108,7 +108,7 @@ static void SHMParams(void * id )
 static struct DriverInstance * DisplaySHM(const char * parameters)
 {
 	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
-	struct SHMDriver * d = ret->id = malloc( sizeof( struct SHMDriver ) );
+	struct SHMDriver * d = ret->driverConfig = malloc( sizeof( struct SHMDriver ) );
 	memset( d, 0, sizeof( struct SHMDriver ) );
 	ret->Func = SHMUpdate;
 	ret->Params = SHMParams;

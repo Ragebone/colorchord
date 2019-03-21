@@ -226,7 +226,7 @@ static struct DriverInstance * DisplayHIDAPI()
 {
 	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	memset( ret, 0, sizeof( struct DriverInstance ) );
-	struct HIDAPIOutDriver * led = ret->id = malloc( sizeof( struct HIDAPIOutDriver ) );
+	struct HIDAPIOutDriver * led = ret->driverConfig = malloc( sizeof( struct HIDAPIOutDriver ) );
 	ret->Func = LEDUpdate;
 	ret->Params = LEDParams;
 	OGCreateThread( LEDOutThread, led );

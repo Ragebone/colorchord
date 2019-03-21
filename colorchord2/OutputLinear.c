@@ -216,7 +216,7 @@ static struct DriverInstance * OutputLinear()
 {
 	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	memset( ret, 0, sizeof( struct DriverInstance ) );
-	struct LEDOutDriver * led = ret->id = malloc( sizeof( struct LEDOutDriver ) );
+	struct LEDOutDriver * led = ret->driverConfig = malloc( sizeof( struct LEDOutDriver ) );
 	memset( led, 0, sizeof( struct LEDOutDriver ) );
 
 	ret->Func = LEDUpdate;

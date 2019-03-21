@@ -76,7 +76,7 @@ static struct DriverInstance * OutputProminent()
 {
 	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	memset( ret, 0, sizeof( struct DriverInstance ) );
-	struct ProminentDriver * led = ret->id = malloc( sizeof( struct ProminentDriver ) );
+	struct ProminentDriver * led = ret->driverConfig = malloc( sizeof( struct ProminentDriver ) );
 	memset( led, 0, sizeof( struct ProminentDriver ) );
 
 	ret->Func = LEDUpdate;

@@ -25,7 +25,7 @@ struct DriverInstance * null( )
 {
 	printf( "Null lights driver initialized.\n" );
 	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
-	ret->id = 0;
+	ret->driverConfig = 0;
 	ret->Func = NullUpdate;
 	ret->Params = NullParams;
 	return ret;

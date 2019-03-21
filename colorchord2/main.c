@@ -43,7 +43,7 @@ double Now = 0;
 int lastfps;
 short screenx, screeny;
 
-struct DriverInstances * outdriver[MAX_OUT_DRIVERS];
+struct DriverInstance * outdriver[MAX_OUT_DRIVERS];
 
 int headless = 0;		REGISTER_PARAM( headless, PAINT );
 int set_screenx = 640;	REGISTER_PARAM( set_screenx, PAINT );
@@ -174,7 +174,7 @@ void deconstruct(){
 	for( i = 0; i < MAX_OUT_DRIVERS; i++ ){
 		if( outdriver[i] != 0){
 			if(outdriver[i]->deconstructDriver != 0){
-				outdriver[i]->deconstructDriver( outdriver[i]->id);
+				outdriver[i]->deconstructDriver( outdriver[i]->driverConfig);
 			}
 		}
 	}
@@ -330,7 +330,7 @@ int main(int argc, char ** argv)
 			}
 
 			if( outdriver[i] )
-				outdriver[i]->Func( outdriver[i]->id, nf );
+				outdriver[i]->Func( outdriver[i]->driverConfig, nf );
 		}
 
 		VisTimeEnd = OGGetAbsoluteTime();

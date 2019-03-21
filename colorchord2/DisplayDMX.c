@@ -112,7 +112,7 @@ static struct DriverInstance * DisplayDMX()
 {
 	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	memset( ret, 0, sizeof( struct DriverInstance ) );
-	struct DMXOutDriver * led = ret->id = malloc( sizeof( struct DMXOutDriver ) );
+	struct DMXOutDriver * led = ret->driverConfig = malloc( sizeof( struct DMXOutDriver ) );
 	ret->Func = DMXUpdate;
 	ret->Params = DMXParams;
 	OGCreateThread( DMXOutThread, led );

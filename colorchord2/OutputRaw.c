@@ -78,7 +78,7 @@ static struct DriverInstance * OutputRaw()
 {
 	struct DriverInstance * ret = malloc( sizeof( struct DriverInstance ) );
 	memset( ret, 0, sizeof( struct DriverInstance ) );
-	struct RawDriver * led = ret->id = malloc( sizeof( struct RawDriver ) );
+	struct RawDriver * led = ret->driverConfig = malloc( sizeof( struct RawDriver ) );
 	memset( led, 0, sizeof( struct RawDriver ) );
 
 	// create a socket
